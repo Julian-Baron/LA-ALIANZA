@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+}
+
+#formularios1{
+    background: linear-gradient(130deg, rgba(235, 218, 75, 0.797) 0%, rgb(239, 255, 121) 3%, rgb(240, 252, 152 ) 21%, rgb(243, 249, 207 ) 100%);
+    width: 23%;
+    height: 490px;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 300px;
+    padding: 35px;
+    border-radius: 2em 2em;
+    padding-left: 10px;
+}
+#formulario1:hover{
+    transform: scale(2);
+}
+
+#for1{
+    display: flexbox;
+    justify-content: center;
+    align-content: center;
+}
+#for1 input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: 12px #EFEA4E  ;
+    text-align: center;
+}
+.doc{
+    width: 265px;
+    height: 55px;
+    font-family: fantasy;
+    display: flex;
+    font-size: 20px;   
+    text-align: center;
+}
+.udsu{
+    width: 495px;
+    height: 55px;
+    font-family: Arial Black;
+    display: flex;
+    font-size: 28px;
+    text-align: center;
+}
+legend{
+    font-size: 30px;
+}
