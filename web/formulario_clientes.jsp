@@ -13,14 +13,74 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>JSP Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles_header.css">
+        <title>Clientes</title>
     </head>
     <body>
        
-        <div id="section">
+       <!-- inicio de la cabecera-->
+    <header>
+		<div class="wrapper">
+			<div class="logo">Supermercado la Alianza</div>
+			
+			<nav>
+				<a href="Formulario_Comprador.jsp">Formulario Comprador</a>
+				<a href="Formulario_Domicilios.jsp">Formulario Domicilios</a>
+				<a href="Formulario_FActuras.jsp">Formulario Facturas</a>
+				<a href="Formulario_empleados.jsp">Formulario empleados</a>
+                                <a href="Formulario_usuarios.jsp">Formulario usuarios</a>
+                                <a href="formulario_Productos.jsp">Gestion productos</a>
+                                <a href="formulario_clientes.jsp">Gestion Clientes</a>
+			</nav>
+		</div>
+	</header>
+    <!-- Contenedor formulario-->
+    <div class="container">
+            <h1>Formulario para la Gestion de clientes</h1>
+            <div class="row">
+                <div id="section">
             <form action="Sv_clientes" target="" method="Post" name="formDatosPersonales">
+                
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Cedula</label>
+                        <input type="text" name="Cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
 
+                        <!--<label for="Cedula">Cedula</label>
+                        <input type="text" name="Cedula" id="nombre" placeholder="Nº Cedula"/>-->
+
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                        <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
+                
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                        <input type="text" name="apellido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
+                        
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo</label>
+                        <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Direccion</label>
+                        <input type="text" name="direccion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
+                        
+                <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                        <input type="text" name="telefono" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                </div>
+                <!--
                 <label for="nombre">Cedula</label>
                 <input type="text" name="Cedula" id="nombre" placeholder="Nº Cedula"/>
                 
@@ -41,12 +101,14 @@
 
                 <input type="submit" name="enviar" value="enviar datos"/>
                 <input type="submit" name="modificar" value="Modificar datos"/>
-                <input type="submit" name="eliminar" value="eliminar datos"/>
+                <input type="submit" name="eliminar" value="eliminar datos"/>-->
+                
+                
             </form>
             
             
             <div id="section-tabla">
-                <table>
+                <table class="table">
                    <thead>
                      <tr>
                          <th>Cedula</th>
@@ -90,8 +152,8 @@
                 
             </div>
         </div>
-        
-        
+        </div>
+        </div>
         
     </body>
 </html>

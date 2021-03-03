@@ -74,16 +74,18 @@ Connection cnn=con.conexionbd();
    
     return dat;
     }
-        public boolean Modificar_compra(Con_Compras us){
+    public boolean Modificar_compra(Con_Compras us){
     boolean dat=false;
     int x;
     
         try {
-            ps=cnn.prepareStatement("Update compras set ()");
-            ps.setString(1,us.getId_compra());
-            ps.setString(2,us.getCod_pro());
-            ps.setInt(3, us.getCantidad());
-            ps.setString(4, us.getCedula());
+            ps=cnn.prepareStatement("Update compra set "
+                    + "cedula='"+us.getCedula()
+                    +"',cod_pro'"+us.getCod_pro()+"',"
+                    + "cantidad='"+us.getCantidad()+"'"
+                    
+                            + "where cedula='"+us.getCedula()+"'");
+           
             
             x=ps.executeUpdate();
             
@@ -106,11 +108,7 @@ Connection cnn=con.conexionbd();
     int x;
     
         try {
-            ps=cnn.prepareStatement("delete from compras where ");
-            ps.setString(1,us.getId_compra());
-            ps.setString(2,us.getCod_pro());
-            ps.setInt(3, us.getCantidad());
-            ps.setString(4, us.getCedula());
+            ps=cnn.prepareStatement("delete from compra where id_compra='"+us.getId_compra()+"'");
             
             x=ps.executeUpdate();
             

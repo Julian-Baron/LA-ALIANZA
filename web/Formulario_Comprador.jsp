@@ -29,10 +29,13 @@
 			<div class="logo">Supermercado la Alianza</div>
 			
 			<nav>
-				<a href="#">Inicio</a>
-				<a href="#">Servicios</a>
-				<a href="#">Proyectos</a>
-				<a href="#">Contacto</a>
+				<a href="Formulario_Comprador.jsp">Formulario Comprador</a>
+				<a href="Formulario_Domicilios.jsp">Formulario Domicilios</a>
+				<a href="Formulario_FActuras.jsp">Formulario Facturas</a>
+				<a href="Formulario_empleados.jsp">Formulario empleados</a>
+                                <a href="Formulario_usuarios.jsp">Formulario usuarios</a>
+                                <a href="formulario_Productos.jsp">Gestion productos</a>
+                                <a href="formulario_clientes.jsp">Gestion Clientes</a>
 			</nav>
 		</div>
 	</header>

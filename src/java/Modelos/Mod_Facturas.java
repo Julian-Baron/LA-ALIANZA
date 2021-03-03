@@ -24,6 +24,30 @@ public class Mod_Facturas {
   
     PreparedStatement ps=null;
     ResultSet rs=null;
+    
+    public ArrayList<Con_Facturas> consultar_factura(){
+     ArrayList <Con_Facturas> lista=new ArrayList<>();
+     
+    try {
+        
+        ps=cnn.prepareStatement("SELECT*FROM factura");
+        
+        rs=ps.executeQuery();
+        
+        while(rs.next()){
+            Con_Facturas uss=new Con_Facturas(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5));
+            lista.add(uss);
+        }
+    } 
+    
+    catch (SQLException ex) {
+        Logger.getLogger(Modelo_Productos.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    return lista;
+    }
+    
+    
     public ArrayList<Con_Facturas> consultar_facturaXnumeroFac(Con_Facturas us){
      ArrayList <Con_Facturas> lista=new ArrayList<>();
      

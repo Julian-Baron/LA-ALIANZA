@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Introducción formularios web</title>
+	<title>Introducción formularios wb</title>
 	<meta charset="utf-8"/>
 	<meta name="description" content=""/>
         
@@ -27,17 +27,21 @@
 			<div class="logo">Supermercado la Alianza</div>
 			
 			<nav>
-				<a href="#">Inicio</a>
-				<a href="#">Servicios</a>
-				<a href="#">Proyectos</a>
-				<a href="#">Contacto</a>
+				<a href="Formulario_Comprador.jsp">Formulario Comprador</a>
+				<a href="Formulario_Domicilios.jsp">Formulario Domicilios</a>
+				<a href="Formulario_FActuras.jsp">Formulario Facturas</a>
+				<a href="Formulario_empleados.jsp">Formulario empleados</a>
+                                <a href="Formulario_usuarios.jsp">Formulario usuarios</a>
+                                <a href="formulario_Productos.jsp">Gestion productos</a>
+                                <a href="formulario_clientes.jsp">Gestion Clientes</a>
 			</nav>
 		</div>
 	</header>
     
+    
     <!-- Contenedor formulario y tablas para centramiento de la pagina-->
     <div class="container ">
-            <h1>Formulario para la Gestion de compras</h1>
+            <h1>Formulario para la Gestion de facturas</h1>
             <div class="row">
                 <div id="section">
                     <form action="" target="" method="Post" name="formDatosPersonales">
@@ -97,6 +101,7 @@
                         <input type="submit" name="modificar" value="Modificar datos"/>
                         <input type="submit" name="eliminar" value="eliminar datos"/>-->
                     </form>
+                    
                     </br>
                     </br>
                     </br>

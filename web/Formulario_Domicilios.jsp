@@ -22,18 +22,23 @@
 </head>
 <body>
     
+    <!-- inicio de la cabecera-->
     <header>
 		<div class="wrapper">
 			<div class="logo">Supermercado la Alianza</div>
 			
 			<nav>
-				<a href="#">Inicio</a>
-				<a href="#">Servicios</a>
-				<a href="#">Proyectos</a>
-				<a href="#">Contacto</a>
+				<a href="Formulario_Comprador.jsp">Formulario Comprador</a>
+				<a href="Formulario_Domicilios.jsp">Formulario Domicilios</a>
+				<a href="Formulario_FActuras.jsp">Formulario Facturas</a>
+				<a href="Formulario_empleados.jsp">Formulario empleados</a>
+                                <a href="Formulario_usuarios.jsp">Formulario usuarios</a>
+                                <a href="formulario_Productos.jsp">Gestion productos</a>
+                                <a href="formulario_clientes.jsp">Gestion Clientes</a>
 			</nav>
 		</div>
-    </header>
+	</header>
+    <!-- Contenedor formulario-->
     <div class="container">
             <h1>Formulario para la Gestion de Domicilios</h1>
             <div class="row">
@@ -41,9 +46,9 @@
                     <form action="Sv_compras" target="" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Codigo de domicilio</label>
-                        <input type="text" name="id_compra" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                            <label for="exampleInputEmail1" class="form-label">Codigo de domicilio</label>
+                            <input type="text" name="id_compra" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                        
 
@@ -82,9 +87,9 @@
                         
                         </br>
 
-                        <button type="submit" class="btn btn-primary">Ingresar</button>
-                        <button type="submit" class="btn btn-primary">Modificar</button>
-                        <button type="submit" class="btn btn-primary">Eliminar</button>
+                        <button type="submit" class="btn btn-primary" name="enviar">Ingresar</button>
+                        <button type="submit" class="btn btn-primary" name="modificar">Modificar</button>
+                        <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>
