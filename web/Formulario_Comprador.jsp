@@ -140,9 +140,9 @@
                         
                         </br>
 
-                        <button type="submit" class="btn btn-primary">Ingresar</button>
-                        <button type="submit" class="btn btn-primary">Modificar</button>
-                        <button type="submit" class="btn btn-primary">Eliminar</button>
+                        <button type="submit" name="enviar" class="btn btn-primary">Ingresar</button>
+                        <button type="submit" name="modificar" class="btn btn-primary">Modificar</button>
+                        <button type="submit" name="eliminar"class="btn btn-primary">Eliminar</button>
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>
