@@ -41,7 +41,7 @@
         
         
        <div id="formularios1"> 
-        <form  id="for1" action="Servlet_login" method="POST">
+        <form  id="for1" action="Sv_login" method="POST">
             
             <legend class="udsu">   INGRESA TUS DATOS</legend>
             <input class="doc" type="text" name="usu" placeholder="USUARIO">
