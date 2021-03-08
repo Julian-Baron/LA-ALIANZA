@@ -116,7 +116,7 @@ public class Sv_compras extends HttpServlet {
                     JOptionPane.showMessageDialog(null,"Datos NO nodificados");
 
                 }
-                 response.sendRedirect("formulario_Comprador.jsp");         
+                 response.sendRedirect("F   ormulario_Comprador.jsp");         
                 
             }
         }

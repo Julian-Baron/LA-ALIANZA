@@ -10,6 +10,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -62,13 +64,48 @@ public class Sv_login extends HttpServlet {
                 sexo=md.getSexo();
                 nombre_cli=md.getNombre_cliente();
                 
+                if(nom.equals(nombre_usu) &&  con.equals(contraseña)){
+                        
+                        HttpSession ses=request.getSession();
+                        ses.setAttribute("Documento", cedula);
+                        ses.setAttribute("usuario", nombre_usu);
+                        ses.setAttribute("clave", contraseña);
+                        ses.setAttribute("rol", rol);
+                        ses.setAttribute("sexo", sexo);
+                        ses.setAttribute("Nombre_cli", nombre_cli);
+                        
+                       if(rol.equalsIgnoreCase("empleado")){
+                            JOptionPane.showMessageDialog(null, "Bienvenido");
+                            response.sendRedirect("Formularios de gestion.jsp");
+                             }
+                        
+                       if(rol.equalsIgnoreCase("cliente")){
+                            JOptionPane.showMessageDialog(null, "Bienvenido");
+                            response.sendRedirect("Comprador.jsp");
+                             }
+                        
+                        if (rol.equalsIgnoreCase("administrador")){
+                          JOptionPane.showMessageDialog(null, "Bienvenido");
+                            response.sendRedirect("Rol.jsp");
+                         }
+                       
+                     }
+                   else{
+                    JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos 123");
+                    response.sendRedirect("Login.jsp");
+                        }
+                    }
+                }
+              else{
+                    JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+                    response.sendRedirect("Login.jsp");
+                } 
                 
                 
                 
-                
-            }
             
-        }
+            
+        
         
     }
 

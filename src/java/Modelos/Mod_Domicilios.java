@@ -50,6 +50,8 @@ public class Mod_Domicilios {
     boolean dat=false;
     int x;
     
+        JOptionPane.showMessageDialog(null, us.getCod_domicilio());
+    
         try {
             ps=cnn.prepareStatement("INSERT INTO domicilio  VALUES  (?,?,?,?)");
             ps.setString(1,us.getCod_domicilio());
@@ -78,8 +80,8 @@ public class Mod_Domicilios {
 
             try {
                 ps=cnn.prepareStatement("update domicilio"
-                        + "SET "
-                        + " fecha_pedido='"+us.getFechaPedido()+"',"
+                        + "SET"
+                        + "fecha_pedido = '"+us.getFechaPedido()+"',"
                                 + "id_compra='"+us.getId_compra()+"',"
                                         + "cedula='"+us.getCedula()+"'"
                                                 + "WHERE cod_domicilio='"+us.getCod_domicilio()+"'");

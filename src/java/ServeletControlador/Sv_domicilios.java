@@ -44,14 +44,15 @@ public class Sv_domicilios extends HttpServlet {
                 boolean in;
                 
                 a=request.getParameter("codigo");
-                c=request.getParameter("id_compra");                
+                c=request.getParameter("idcompra1");                
                 e=request.getParameter("fecha");
-                f=request.getParameter("ceduladelempleado");
+                f=request.getParameter("cedula");
+                JOptionPane.showMessageDialog(null,"Mensaje "+e+" "+f);
                 
-                Con_Domicilios con=new Con_Domicilios(f,a,e,c);
+                Con_Domicilios con=new Con_Domicilios(f, a, e, c);
                 Modelos.Mod_Domicilios md=new Mod_Domicilios();
                 
-                 in=md.insertar_domicilio(con);
+                in=md.insertar_domicilio(con);
            
                 if(in){
                     JOptionPane.showMessageDialog(null,"Datos guardados");
@@ -64,6 +65,8 @@ public class Sv_domicilios extends HttpServlet {
                         
                 
             }
+            
+            
             if (request.getParameter("modificar")!=null) {
                 String a,c,e,f;
                 boolean in;

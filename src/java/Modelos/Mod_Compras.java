@@ -30,7 +30,7 @@ Connection cnn=con.conexionbd();
     try {
        
         
-        ps=cnn.prepareStatement("SELECT*FROM compras");
+        ps=cnn.prepareStatement("SELECT*FROM compra");
         
         rs=ps.executeQuery();
         
