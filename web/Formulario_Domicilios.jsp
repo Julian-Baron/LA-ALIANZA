@@ -94,36 +94,38 @@
             <h1>Formulario para la Gestion de Domicilios</h1>
             <div class="row">
                 <div id="section">
-                    <form action="Sv_compras" target="" method="Post" name="formDatosPersonales">
+                    <form action="Sv_domicilios" target="" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Codigo de domicilio</label>
-                            <input type="text" name="id_compra" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" name="codigo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text"></div>
                         </div>
                        
 
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Fecha_pedido</label>
-                        <input type="text" name="Codigo_pro" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="date" name="fecha" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
 
                         
-
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Id_compra</label>
-                        <input type="number" name="Cantidad re" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="number" name="idcompra1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
                         
                         
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Cedula del empleado</label>
-                        <input type="text" name="Cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
-
+                        
+                         <button type="submit" class="btn btn-primary" name="enviar">Ingresar</button>
+                        <button type="submit" class="btn btn-primary" name="modificar">Modificar</button>
+                        <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
                         <div class="col-auto">
 
                         
@@ -138,9 +140,6 @@
                         
                         </br>
 
-                        <button type="submit" class="btn btn-primary" name="enviar">Ingresar</button>
-                        <button type="submit" class="btn btn-primary" name="modificar">Modificar</button>
-                        <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>
@@ -156,7 +155,7 @@
                                  <th>Cod_domicilio</th>
                                  <th>Fecha de pedido</th>
                                  <th>Id de la compra</th>
-                                 <th>Cedula del comprador</th>
+                                 <th>Cedula del Empleado</th>
                                  
                              </tr>     
                          </thead>
