@@ -80,10 +80,8 @@ public class Mod_Domicilios {
 
             try {
                 ps=cnn.prepareStatement("update domicilio"
-                        + "SET"
-                        + "fecha_pedido = '"+us.getFechaPedido()+"',"
-                                + "id_compra='"+us.getId_compra()+"',"
-                                        + "cedula='"+us.getCedula()+"'"
+                        + " SET id_compra='"+us.getId_compra()+"', fecha_pedido='"+us.getFechaPedido()+"', "
+                                        +"cedula='"+us.getCedula()+"'"
                                                 + "WHERE cod_domicilio='"+us.getCod_domicilio()+"'");
                 x=ps.executeUpdate();
 

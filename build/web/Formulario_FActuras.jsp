@@ -94,30 +94,30 @@
             <h1>Formulario para la Gestion de facturas</h1>
             <div class="row">
                 <div id="section">
-                    <form action="" target="" method="Post" name="formDatosPersonales">
+                    <form action="Sv_facturas" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Consultar Factura por numero de factura</label>
-                            <input type="number" name="Codigo Factura" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text"></div>
+                            <label  class="form-label">Consultar Factura por numero de factura</label>
+                            <input type="number" name="Codigo Factura" class="form-control"  aria-describedby="emailHelp">
+                            <div  class="form-text"></div>
                             <input type="submit" name="FacturaEn" class="btn btn-primary" value="Ingresar">
                         </div>
                         
                         
 
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Consultar Factura por cedula del cliente</label>
-                            <input type="text" name="Codigo_pro" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text"></div>
+                            <label  class="form-label">Consultar Factura por cedula del cliente</label>
+                            <input type="text" name="Codigo_pro" class="form-control"  aria-describedby="emailHelp">
+                            <div  class="form-text"></div>
                             <input type="submit" name="PorCedula" class="btn btn-primary" value="Ingresar">
                         </div>
 
                         
 
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Consultar Factura  por fecha de accion</label>
-                            <input type="number" name="Cantidad re" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text"></div>
+                            <label  class="form-label">Consultar Factura  por fecha de accion</label>
+                            <input type="number" name="Cantidad re" class="form-control"  aria-describedby="emailHelp">
+                            <div  class="form-text"></div>
                             <input type="submit" name="PorFecha" class="btn btn-primary" value="Ingresar">
                         </div>
 
@@ -141,7 +141,7 @@
                         <div class="col-auto">
                                               
                         -->
-                        </br>
+                        
 
                         
                         <!--<button type="submit" class="btn btn-primary">Modificar</button>
@@ -150,11 +150,12 @@
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>
                         <input type="submit" name="eliminar" value="eliminar datos"/>-->
+                        <!--<input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
+                        <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                        <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">-->
                     </form>
                     
-                    </br>
-                    </br>
-                    </br>
+                    
                     <div id="section-tabla">
                         <table class="table">
                            <thead>

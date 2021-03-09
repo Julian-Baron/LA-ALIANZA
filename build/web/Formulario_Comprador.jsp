@@ -99,15 +99,15 @@
                     <form action="Sv_compras" target="" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Id_compra</label>
-                        <input type="text" name="id_compra" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label class="form-label">Id_compra</label>
+                        <input type="text" name="id_compra" class="form-control" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
                        
 
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Codigo_pro</label>
-                        <input type="text" name="Codigo_pro" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="Codigo_pro" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
 
@@ -115,21 +115,23 @@
 
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Cantidad requerida</label>
-                        <input type="number" name="Cantidad re" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="number" name="Cantidad re" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
 
                         
                         <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Cedula del comprador</label>
-                        <input type="text" name="Cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="Cedula" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
 
                         <div class="col-auto">
-
+                        <button type="submit" name="enviar" class="btn btn-primary">Ingresar</button>
+                        <button type="submit" name="modificar" class="btn btn-primary">Modificar</button>
+                        <button type="submit" name="eliminar"class="btn btn-primary">Eliminar</button>    
                         
-                        </br>
+                       
                         <!--<label for="telefono">Rol</label>
                         <input type="email" name="rol" id="email" placeholder="Correo"  />
 
@@ -138,11 +140,9 @@
                         -->
                         
                         
-                        </br>
+                        
 
-                        <button type="submit" name="enviar" class="btn btn-primary">Ingresar</button>
-                        <button type="submit" name="modificar" class="btn btn-primary">Modificar</button>
-                        <button type="submit" name="eliminar"class="btn btn-primary">Eliminar</button>
+                        
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>

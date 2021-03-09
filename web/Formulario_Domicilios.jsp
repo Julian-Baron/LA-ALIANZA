@@ -51,22 +51,14 @@
                         
         
              <!--</div>-->
-                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-info">
+             <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #801FD1">
                     <div class="container"> 
                         <a class="navbar-brand" href="#">Menu</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
-                          </button>
+                        </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                          <ul class="navbar-nav">
-                              <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Formularios
-                              </a>
-                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item nav-link " href="#">Formularios Clientes</a></li>
-                                <li><a class="dropdown-item nav-link" href="formulario_Productos.jsp">Formularios Productos</a></li>
-                                <li><a class="dropdown-item nav-link active" href="#">Formularios Domicilios</a></li>
+                            
                                 <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
                                 <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
                                 <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
@@ -97,39 +89,39 @@
                     <form action="Sv_domicilios" target="" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Codigo de domicilio</label>
-                            <input type="text" name="codigo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label  class="form-label">Codigo de domicilio</label>
+                            <input type="text" name="codigo" class="form-control"  aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text"></div>
                         </div>
                        
 
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Fecha_pedido</label>
-                        <input type="date" name="fecha" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label class="form-label">Fecha_pedido</label>
+                        <input type="date" name="fecha" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
 
                         
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Id_compra</label>
-                        <input type="number" name="idcompra1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label  class="form-label">Id_compra</label>
+                        <input type="number" name="idcompra1" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
                         
                         
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Cedula del empleado</label>
-                        <input type="text" name="cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label class="form-label">Cedula del empleado</label>
+                        <input type="text" name="cedula" class="form-control"  aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text"></div>
                         </div>
                         
-                         <button type="submit" class="btn btn-primary" name="enviar">Ingresar</button>
-                        <button type="submit" class="btn btn-primary" name="modificar">Modificar</button>
-                        <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
+                        <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
+                        <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                        <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
                         <div class="col-auto">
 
                         
-                        </br>
+                        
                         <!--<label for="telefono">Rol</label>
                         <input type="email" name="rol" id="email" placeholder="Correo"  />
 
@@ -138,7 +130,7 @@
                         -->
                         
                         
-                        </br>
+                       
 
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>

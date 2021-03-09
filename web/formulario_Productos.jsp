@@ -94,57 +94,57 @@
             <h1>Formulario para la Gestion de Productos</h1>
             <div class="row">
                 <div id="section">
-                <form action="Sv_productos" target="" method="Post" name="formDatosPersonales">
+                <form action="Sv_productos" method="Post" name="formDatosPersonales">
                     
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Codigo de producto</label>
-                    <input type="text" name="Codigo_pro" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Codigo de producto</label>
+                    <input type="text" name="Codigo_pro" class="form-control"  aria-describedby="emailHelp">
+                    <div  class="form-text"></div>
                 </div>
                     
                 <!--<label for="nombre">Cod_producto</label>
                 <input type="text" name="Codigo_pro" id="nombre" placeholder="Nombre del producto"/>
                 -->
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Nombre</label>
+                    <input type="text" name="nombre" class="form-control"  aria-describedby="emailHelp">
+                    <div  class="form-text"></div>
                 </div>
                 
                 <!--<label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto"/>
                 -->
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Marca del producto</label>
-                    <input type="text" name="Marca" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Marca del producto</label>
+                    <input type="text" name="Marca" class="form-control"  aria-describedby="emailHelp">
+                    <div  class="form-text"></div>
                 </div>
                 
                 <!--<label for="apellidos">Marca del Producto</label>
                 <input type="text" name="Marca" id="apellidos" placeholder="Marca del producto"/>
                 -->
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Cantidad disponible</label>
-                    <input type="text" name="Cantidad" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Cantidad disponible</label>
+                    <input type="text" name="Cantidad" class="form-control"  aria-describedby="emailHelp">
+                    <div class="form-text"></div>
                 </div>
                 <!--
                 <label for="email" />Cantidad disponible</label>
                 <input type="text" name="Cantidad" id="email" placeholder="disponible" required />
                 -->
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Precio del producto</label>
-                    <input type="text" name="Precio" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Precio del producto</label>
+                    <input type="text" name="Precio" class="form-control"  aria-describedby="emailHelp">
+                    <div  class="form-text"></div>
                 </div>
                 <!--
                 <label for="Precio_pro">Precio del producto</label>
                 <input type ="text" name="Precio" id="asunto" placeholder="Precio pro"/>
                 -->
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Descripcion del producto</label>
-                    <input type="text" name="Descripcion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
+                    <label  class="form-label">Descripcion del producto</label>
+                    <input type="text" name="Descripcion" class="form-control"  aria-describedby="emailHelp">
+                    <div  class="form-text"></div>
                 </div>
                 <!--
                 <label for="asunto">Descripcion del producto</label>
@@ -153,9 +153,9 @@
                 <input type="submit" name="enviar" value="enviar datos"/>
                 <input type="submit" name="modificar" value="enviar datos"/>
                 <input type="submit" name="eliminar" value="enviar datos"/>-->
-                <button type="submit" class="btn btn-primary" name="enviar">Ingresar</button>
-                <button type="submit" class="btn btn-primary" name="modificar">Modificar</button>
-                <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
+                <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
+                        <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                        <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
                 </form>
             
             

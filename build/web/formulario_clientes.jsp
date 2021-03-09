@@ -94,50 +94,52 @@
             <h1>Formulario para la Gestion de clientes</h1>
             <div class="row">
                 <div id="section">
-            <form action="Sv_clientes" target="" method="Post" name="formDatosPersonales">
+            <form action="Sv_clientes" method="Post" name="formDatosPersonales">
                 
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Cedula</label>
-                        <input type="text" name="Cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label  class="form-label">Cedula</label>
+                        <input type="text" name="Cedula" class="form-control"  aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
 
                         <!--<label for="Cedula">Cedula</label>
                         <input type="text" name="Cedula" id="nombre" placeholder="Nº Cedula"/>-->
 
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                        <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label  class="form-label">Nombre</label>
+                        <input type="text" name="nombre" class="form-control"  aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
                 
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Apellido</label>
-                        <input type="text" name="apellido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label class="form-label">Apellido</label>
+                        <input type="text" name="apellido" class="form-control"  aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
                         
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Correo</label>
-                        <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label class="form-label">Correo</label>
+                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Direccion</label>
-                        <input type="text" name="direccion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label class="form-label">Direccion</label>
+                        <input type="text" name="direccion" class="form-control" aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
                         
                 <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Telefono</label>
-                        <input type="text" name="telefono" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label class="form-label">Telefono</label>
+                        <input type="text" name="telefono" class="form-control" aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                 </div>
                         
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-                <button type="submit" class="btn btn-primary">Modificar</button>
-                <button type="submit" class="btn btn-primary">Eliminar</button>
-       
+                
+                <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
+                <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
+                   
+                
                 <!--
                 <label for="nombre">Cedula</label>
                 <input type="text" name="Cedula" id="nombre" placeholder="Nº Cedula"/>

@@ -67,12 +67,14 @@ public class Sv_usuarios extends HttpServlet {
                 String a,b,ef,d,e;
                 boolean an=false;
                 
+                
                 a=request.getParameter("Cedula");
                 b=request.getParameter("nombre");
                 ef=request.getParameter("contrasena");
                 d=request.getParameter("rol");
                 e=request.getParameter("sexo");
                 
+                JOptionPane.showMessageDialog(null,"Cedula"+ a);
                 Con_usuarios con=new Con_usuarios(a, b, ef, d, e);
                 Modelos.Mod_usuarios mu=new Mod_usuarios();
                 

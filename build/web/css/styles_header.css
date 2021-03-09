@@ -3,7 +3,7 @@
 }
 
 body{
-    background: #ffffff;
+    background: #EBE9AE;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 	overflow:hidden; /* Eliminamos errores de float */
         background: #ffffff;
 	margin-bottom:20px;
-        margin-top:20px;
+        
 }
 
 .wrapper {
@@ -21,11 +21,15 @@ header {
 header .logo {
 	color:#ffffff;
 	font-size:50px;
-	line-height:200px;
-	margin-top: 40px;
         background: #dae54d;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 20px;
+        padding-right: 0px;
+}
+
+header .logo img{
+	  width: 5%;
+          height:3%;
+          padding-bottom: 15px;
 }
 /*
 header nav {

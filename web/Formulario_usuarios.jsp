@@ -94,27 +94,27 @@
             <h1>Formulario para la Gestion de usuarios</h1>
             <div class="row">
                 <div id="section">
-                    <form action="Sv_usuarios" target="" method="Post" name="formDatosPersonales">
+                    <form action="Sv_usuarios"  method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Cedula</label>
-                        <input type="text" name="Cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label  class="form-label">Cedula</label>
+                        <input type="text" name="Cedula" class="form-control"  aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                         </div>
 
                         <!--<label for="Cedula">Cedula</label>
                         <input type="text" name="Cedula" id="nombre" placeholder="Nº Cedula"/>-->
 
                         <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
-                        <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label  class="form-label">Nombre de usuario</label>
+                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                         </div>
 
                        <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Contraseña de usuario</label>
-                        <input type="text" name="contrasena" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                        <label  class="form-label">Contraseña de usuario</label>
+                        <input type="text" name="contrasena" class="form-control"  aria-describedby="emailHelp">
+                        <div  class="form-text"></div>
                         </div> 
                             
                         <!--<label for="nombre">Nombre de usuario</label>
@@ -151,11 +151,11 @@
                             <option >Otro..</option>
                         </select>
                         </div>
-                        </br>
+                        
 
-                        <button type="submit" name="enviar" class="btn btn-primary">Ingresar</button>
-                        <button type="submit" name="modificar" class="btn btn-primary">Modificar</button>
-                        <button type="submit" name="eliminar" class="btn btn-primary">Eliminar</button>
+                        <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
+                        <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                        <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
 
                         <!--<input type="submit" name="enviar" value="enviar datos"/>
                         <input type="submit" name="modificar" value="Modificar datos"/>

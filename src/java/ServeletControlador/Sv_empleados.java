@@ -44,7 +44,7 @@ public class Sv_empleados extends HttpServlet {
                 String a,b,c,e,f;
                 boolean in;
                 String d;
-                a=request.getParameter("Cedula");
+                a=request.getParameter("cedula");
                 b=request.getParameter("nombre");
                 c=request.getParameter("apellido");
                 d=request.getParameter("telefono");
@@ -73,12 +73,12 @@ public class Sv_empleados extends HttpServlet {
                 String a,b,c,e,f;
                 boolean in;
                 String d;
-                a=request.getParameter("Cedula");
+                a=request.getParameter("cedula");
                 b=request.getParameter("nombre");
                 c=request.getParameter("apellido");
                 d=request.getParameter("telefono");
                 e=request.getParameter("correo");
-                f=request.getParameter("codigo");
+                f=request.getParameter("codigo");       
                 
                 
                 
