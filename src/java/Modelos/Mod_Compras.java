@@ -46,7 +46,29 @@ Connection cnn=con.conexionbd();
     
     return lista;
     }
-
+    
+    public ArrayList<Con_Compras> consultarcompras_id(){
+     ArrayList <Con_Compras> lista=new ArrayList<>();
+     
+    try {
+       
+        
+        ps=cnn.prepareStatement("SELECT id_compra FROM compra ORDER BY id_compra ASC");
+        rs=ps.executeQuery();
+        
+        while(rs.next()){
+             Con_Compras us=new Con_Compras(rs.getString(1));
+            lista.add(us);
+        }
+    } 
+    
+    catch (SQLException ex) {
+        Logger.getLogger(Modelo_Productos.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    return lista;
+    }
+    
     public boolean insertar_compra(Con_Compras us){
     boolean dat=false;
     int x;
@@ -80,11 +102,7 @@ Connection cnn=con.conexionbd();
     
         try {
             ps=cnn.prepareStatement("Update compra set "
-                    + "cedula='"+us.getCedula()
-                    +"',cod_pro'"+us.getCod_pro()+"',"
-                    + "cantidad='"+us.getCantidad()+"'"
-                    
-                            + "where cedula='"+us.getCedula()+"'");
+                    + "cedula='"+us.getCedula()+"',cantidad='"+us.getCantidad()+"', cod_pro='"+us.getCod_pro()+"' where id_compra='"+us.getId_compra()+"'");
            
             
             x=ps.executeUpdate();
@@ -103,27 +121,27 @@ Connection cnn=con.conexionbd();
    
     return dat;
     }
-        public boolean eliminar_compra(Con_Compras us){
-    boolean dat=false;
-    int x;
-    
-        try {
-            ps=cnn.prepareStatement("delete from compra where id_compra='"+us.getId_compra()+"'");
-            
-            x=ps.executeUpdate();
-            
-            if(x>0){
-                dat=true;
+    public boolean eliminar_compra(Con_Compras us){
+        boolean dat=false;
+        int x;
+            JOptionPane.showMessageDialog(null,"entra" );
+            try {
+                ps=cnn.prepareStatement("delete from compra where id_compra='"+us.getId_compra()+"'");
+
+                x=ps.executeUpdate();
+
+                if(x>0){
+                    dat=true;
+                }
+
+                }
+
+
+            catch (Exception e) {
+
+                JOptionPane.showMessageDialog(null, e);
             }
-                
-            }
-         
-         
-        catch (Exception e) {
-            
-            JOptionPane.showMessageDialog(null, e);
-        }
-   
-    return dat;
+
+        return dat;
     }
 }
