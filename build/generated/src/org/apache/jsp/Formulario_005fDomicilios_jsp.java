@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import Constructor.Con_Compras;
+import Modelos.Mod_Compras;
 import Modelos.Mod_Domicilios;
 import java.util.ArrayList;
 import Constructor.Con_Domicilios;
@@ -50,6 +52,8 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("<head>\n");
@@ -77,9 +81,9 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js\" integrity=\"sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG\" crossorigin=\"anonymous\"></script>\n");
       out.write("    -->\n");
       out.write("       <!-- inicio de la cabecera-->\n");
-      out.write("        <header>\n");
+      out.write("        <header>        \n");
       out.write("\t\t<!--<div class=\"wrapper\">-->\n");
-      out.write("\t\t\t<div class=\"logo container\">Supermercado la Alianza</div>\n");
+      out.write("\t\t\t\n");
       out.write("\t\t\t\n");
       out.write("\t\t\t<!--<nav>\n");
       out.write("\t\t\t\t<a href=\"Formulario_Comprador.jsp\">Formulario Comprador</a>\n");
@@ -93,22 +97,23 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("                        \n");
       out.write("        \n");
       out.write("             <!--</div>-->\n");
-      out.write("             <nav class=\"navbar navbar-expand-lg fixed-top navbar-light bg\" style=\"background: #801FD1\">\n");
+      out.write("             <nav class=\"navbar navbar-expand-lg fixed-top navbar-light bg\" style=\"background: #DEB916\">\n");
+      out.write("                  <div class=\"logo\">Supermercado la Alianza                       \n");
+      out.write("                            <img src=\"img/shopping-cart-2020929_640.png \" class=\"\" >\n");
+      out.write("                            </div>\n");
       out.write("                    <div class=\"container\"> \n");
+      out.write("                       \n");
       out.write("                        <a class=\"navbar-brand\" href=\"#\">Menu</a>\n");
       out.write("                        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
       out.write("                            <span class=\"navbar-toggler-icon\"></span>\n");
-      out.write("                          </button>\n");
+      out.write("                        </button>\n");
       out.write("                        <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n");
-      out.write("                          <ul class=\"navbar-nav\">\n");
+      out.write("                            <ul class=\"navbar-nav\">\n");
       out.write("                              <li class=\"nav-item dropdown\">\n");
       out.write("                              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n");
       out.write("                                  Formularios\n");
       out.write("                              </a>\n");
       out.write("                              <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n");
-      out.write("                                <li><a class=\"dropdown-item nav-link \" href=\"#\">Formularios Clientes</a></li>\n");
-      out.write("                                <li><a class=\"dropdown-item nav-link\" href=\"formulario_Productos.jsp\">Formularios Productos</a></li>\n");
-      out.write("                                <li><a class=\"dropdown-item nav-link active\" href=\"#\">Formularios Domicilios</a></li>\n");
       out.write("                                <li><a class=\"dropdown-item nav-link\" href=\"Formulario_usuarios.jsp\">Formularios Usuarios</a></li>\n");
       out.write("                                <li><a class=\"dropdown-item nav-link\" href=\"Formulario_FActuras.jsp\">Formularios Facturas</a></li>\n");
       out.write("                                <li><a class=\"dropdown-item nav-link\" href=\"Formulario_Comprador.jsp\">Formularios Compras</a></li>\n");
@@ -132,12 +137,11 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("\t</header>\n");
       out.write("       \n");
       out.write("    <!-- Contenedor formulario-->\n");
-      out.write("    <div class=\"container\">\n");
+      out.write("    <div class=\"container\" id=\"container-first\">\n");
       out.write("            <h1>Formulario para la Gestion de Domicilios</h1>\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div id=\"section\">\n");
       out.write("                    <form action=\"Sv_domicilios\" target=\"\" method=\"Post\" name=\"formDatosPersonales\">\n");
-      out.write("\n");
       out.write("                        <div class=\"mb-3\">\n");
       out.write("                            <label  class=\"form-label\">Codigo de domicilio</label>\n");
       out.write("                            <input type=\"text\" name=\"codigo\" class=\"form-control\"  aria-describedby=\"emailHelp\">\n");
@@ -154,7 +158,32 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("                        \n");
       out.write("                        <div class=\"mb-3\">\n");
       out.write("                        <label  class=\"form-label\">Id_compra</label>\n");
-      out.write("                        <input type=\"number\" name=\"idcompra1\" class=\"form-control\"  aria-describedby=\"emailHelp\">\n");
+      out.write("                        <select type=\"number\" name=\"idcompra1\" class=\"form-select\"  aria-describedby=\"emailHelp\">\n");
+      out.write("                            \n");
+      out.write("                            <option selected>Open this select menu</option>\n");
+      out.write("                            \n");
+      out.write("                            ");
+   
+                            ArrayList<Constructor.Con_Compras> datoy=new ArrayList<>();
+                            Modelos.Mod_Compras my=new Mod_Compras();
+                            Con_Compras ay=new Con_Compras();
+                            datoy= my.consultarcompras_id();
+                          
+                                for(int i=0; i<datoy.size(); i++){
+                                     ay=datoy.get(i);               
+                                     
+      out.write("\n");
+      out.write("                                     <option value=\"\">");
+      out.print(ay.getId_compra());
+      out.write("</option>  \n");
+      out.write("                                   ");
+
+                                   }
+                                
+      out.write("\n");
+      out.write("                            \n");
+      out.write("                           \n");
+      out.write("                        </select>\n");
       out.write("                        <div id=\"emailHelp\" class=\"form-text\"></div>\n");
       out.write("                        </div>\n");
       out.write("                        \n");
@@ -169,6 +198,9 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("                        <input type=\"submit\" name=\"modificar\" class=\"btn btn-secondary\" value=\"Modificar\">    \n");
       out.write("                        <input type=\"submit\" name=\"enviar\" class=\"btn btn-warning\" value=\"Insertar\">\n");
       out.write("                        <div class=\"col-auto\">\n");
+      out.write("                    </form>\n");
+      out.write("\n");
+      out.write("                        \n");
       out.write("\n");
       out.write("                        \n");
       out.write("                        \n");
@@ -186,7 +218,7 @@ public final class Formulario_005fDomicilios_jsp extends org.apache.jasper.runti
       out.write("                        <!--<input type=\"submit\" name=\"enviar\" value=\"enviar datos\"/>\n");
       out.write("                        <input type=\"submit\" name=\"modificar\" value=\"Modificar datos\"/>\n");
       out.write("                        <input type=\"submit\" name=\"eliminar\" value=\"eliminar datos\"/>-->\n");
-      out.write("                    </form>\n");
+      out.write("                    \n");
       out.write("                    </br>\n");
       out.write("                    </br>\n");
       out.write("                    </br>\n");

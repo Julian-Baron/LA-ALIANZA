@@ -77,14 +77,14 @@ public class Sv_productos extends HttpServlet {
                 Con_productos con=new Con_productos(a, f, d, c, b, e);
                 Modelo_Productos md=new Modelo_Productos();
                 
-                 in=md.insertar_producto(con);
+                 in=md.modificar_producto(con);
            
                 if(in){
-                    JOptionPane.showMessageDialog(null,"Datos guardados");
+                    JOptionPane.showMessageDialog(null,"Datos modificados");
                    
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Datos NO guardados");
+                    JOptionPane.showMessageDialog(null,"Datos NO modificados");
 
                 }
                  response.sendRedirect("formulario_Productos.jsp");         
@@ -95,26 +95,22 @@ public class Sv_productos extends HttpServlet {
                 boolean in;
                 int d;
                 a=request.getParameter("Codigo_pro");
-                b=request.getParameter("nombre");
-                c=request.getParameter("Marca");
-                d=Integer.parseInt(request.getParameter("Cantidad"));
-                e=request.getParameter("Precio");
-                f=request.getParameter("Descripcion");
+               
                 
-                Con_productos con=new Con_productos(a, f, d, c, b, e);
+                Con_productos con=new Con_productos(a);
                 Modelo_Productos md=new Modelo_Productos();
                 
-                 in=md.insertar_producto(con);
+                 in=md.eliminar_producto(con);
            
                 if(in){
-                    JOptionPane.showMessageDialog(null,"Datos guardados");
+                    JOptionPane.showMessageDialog(null,"Datos eliminados");
                    
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Datos NO guardados");
+                    JOptionPane.showMessageDialog(null,"Datos NO eliminados");
 
                 }
-                 response.sendRedirect("formulario_Productos.jsp");         
+                response.sendRedirect("formulario_Productos.jsp");         
                 
             }
         }

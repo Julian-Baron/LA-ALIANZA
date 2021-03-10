@@ -50,7 +50,7 @@ public class Mod_Domicilios {
     boolean dat=false;
     int x;
     
-        JOptionPane.showMessageDialog(null, us.getCod_domicilio());
+        
     
         try {
             ps=cnn.prepareStatement("INSERT INTO domicilio  VALUES  (?,?,?,?)");
@@ -77,7 +77,7 @@ public class Mod_Domicilios {
     public boolean modificar_domicilio(Con_Domicilios us){
         boolean dat=false;
         int x;
-
+        
             try {
                 ps=cnn.prepareStatement("update domicilio"
                         + " SET id_compra='"+us.getId_compra()+"', fecha_pedido='"+us.getFechaPedido()+"', "
@@ -105,8 +105,7 @@ public class Mod_Domicilios {
         int x;
 
             try {
-                ps=cnn.prepareStatement("delete domicilio "
-                        + "where cod_domicilio='"+us.getCod_domicilio()+"'");
+                ps=cnn.prepareStatement("DELETE FROM domicilio WHERE cod_domicilio='"+us.getCod_domicilio()+"'");
                 x=ps.executeUpdate();
 
                 if(x>0){

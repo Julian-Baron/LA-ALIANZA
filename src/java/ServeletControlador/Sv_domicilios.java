@@ -37,17 +37,17 @@ public class Sv_domicilios extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        PrintWriter out = response.getWriter();
             /* TODO output your page here. You may use following sample code. */
             if (request.getParameter("enviar")!=null) {
                 String a,c,e,f;
                 boolean in;
                 
                 a=request.getParameter("codigo");
-                c=request.getParameter("idcompra1");                
+                c=request.getParameter("idcompra");                
                 e=request.getParameter("fecha");
                 f=request.getParameter("cedula");
-                JOptionPane.showMessageDialog(null,"Mensaje "+e+" "+f);
+                
                 
                 Con_Domicilios con=new Con_Domicilios(f, a, e, c);
                 Modelos.Mod_Domicilios md=new Mod_Domicilios();
@@ -72,9 +72,10 @@ public class Sv_domicilios extends HttpServlet {
                 boolean in;
                 
                 a=request.getParameter("codigo");
-                c=request.getParameter("id_compra");                
+                c=request.getParameter("idcompra");                
                 e=request.getParameter("fecha");
-                f=request.getParameter("ceduladelempleado");
+                f=request.getParameter("cedula");
+                
                 
                 Con_Domicilios con=new Con_Domicilios(f,a,e,c);
                 Modelos.Mod_Domicilios md=new Mod_Domicilios();
@@ -86,7 +87,7 @@ public class Sv_domicilios extends HttpServlet {
                    
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Datos NO guardados");
+                    JOptionPane.showMessageDialog(null,"Datos NO modificados");
 
                 }
                           
@@ -97,9 +98,9 @@ public class Sv_domicilios extends HttpServlet {
                 boolean in;
                 
                 a=request.getParameter("codigo");
-                c=request.getParameter("id_compra");                
+                c=request.getParameter("idcompra");                
                 e=request.getParameter("fecha");
-                f=request.getParameter("ceduladelempleado");
+                f=request.getParameter("cedula");
                 
                 Con_Domicilios con=new Con_Domicilios(f,a,e,c);
                 Modelos.Mod_Domicilios md=new Mod_Domicilios();
@@ -119,7 +120,7 @@ public class Sv_domicilios extends HttpServlet {
             }
             response.sendRedirect("Formulario_Domicilios.jsp");     
 
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

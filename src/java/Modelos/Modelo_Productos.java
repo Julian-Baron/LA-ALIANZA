@@ -76,13 +76,8 @@ Connection cnn=con.conexionbd();
         int x;
 
             try {
-                ps=cnn.prepareStatement("update producto SET"
-                        + "nombre_pro='"+us.getNombre_pro()+"',"
-                        + "marca_pro='"+us.getMarca()+"',"
-                        + "disponibles='"+us.getDisponibles()+"',"
-                        + "precio_pro='"+us.getPrecio()+"',"
-                        + "descripcion_pro='"+us.getDescripcion()+"'"
-                        + "WHERE cod_pro='"+us.getCod_pro()+"'");
+                ps=cnn.prepareStatement("update producto SET " + "nombre_pro='"+us.getNombre_pro()+"'," + "marca_pro='"+us.getMarca()+"'," + "disponibles='"+us.getDisponibles()+"',"
+                        + "precio_pro='"+us.getPrecio()+"'," + "descripcion_pro='"+us.getDescripcion()+"'" + "WHERE cod_pro='"+us.getCod_pro()+"'");
                 x=ps.executeUpdate();
 
                 if(x>0){
@@ -105,7 +100,7 @@ Connection cnn=con.conexionbd();
         int x;
 
             try {
-                ps=cnn.prepareStatement("delete producto where cod_pro='"+us.getCod_pro()+"'");
+                ps=cnn.prepareStatement("delete From producto where cod_pro='"+us.getCod_pro()+"'");
                 x=ps.executeUpdate();
 
                 if(x>0){

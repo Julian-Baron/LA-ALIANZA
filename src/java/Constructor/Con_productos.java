@@ -22,6 +22,10 @@ public class Con_productos {
     public Con_productos() {
     }
 
+    public Con_productos(String cod_pro) {
+        this.cod_pro = cod_pro;
+    }
+    
     
 
     public String getCod_pro() {

@@ -62,7 +62,7 @@ public class Sv_compras extends HttpServlet {
                     JOptionPane.showMessageDialog(null,"Datos NO guardados");
 
                 }
-                 response.sendRedirect("formulario_Comprador.jsp");         
+                 
                 
             }
             if(request.getParameter("modificar")!=null) {
@@ -89,36 +89,40 @@ public class Sv_compras extends HttpServlet {
                     JOptionPane.showMessageDialog(null,"Datos NO nodificados");
 
                 }
-                 response.sendRedirect("formulario_Comprador.jsp");         
+                
                 
             }
+            
             if(request.getParameter("eliminar")!=null) {
+             
+                
                 String a,b,e,f;
                 int c;
                 boolean in;
                 int d;
+                
                 a=request.getParameter("id_compra");
-                b=request.getParameter("Codigo_pro");
-                c=Integer.parseInt(request.getParameter("Cantidad re"));
-                e=request.getParameter("Cedula");
+                                                  
+                JOptionPane.showMessageDialog(null,"jajaj" +a);
                 
                 
-                Con_Compras con=new Con_Compras(e,b,c,a);
+                Con_Compras con=new Con_Compras(a);
                 Modelos.Mod_Compras md=new Mod_Compras();
                 
-                 in=md.Modificar_compra(con);
+                in=md.eliminar_compra(con);
            
                 if(in){
-                    JOptionPane.showMessageDialog(null,"Datos modificados");
+                    JOptionPane.showMessageDialog(null,"Datos eliminados");
                    
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Datos NO nodificados");
+                    JOptionPane.showMessageDialog(null,"Datos NO eliminados");
 
                 }
-                 response.sendRedirect("F   ormulario_Comprador.jsp");         
+                 
                 
             }
+            response.sendRedirect("Formulario_Comprador.jsp");         
         }
     }
 

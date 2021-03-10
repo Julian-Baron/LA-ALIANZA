@@ -68,7 +68,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    <!-- Option 1: Bootstrap Bundle with Popper -->\n");
       out.write("    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0\" crossorigin=\"anonymous\"></script>\n");
-      out.write("\n");
       out.write("    \n");
       out.write("       <!-- inicio de la cabecera-->\n");
       out.write("        <header>\n");
@@ -127,7 +126,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </nav>\n");
       out.write("       \n");
       out.write("\t</header>\n");
-      out.write("       \n");
+      out.write("       <!--Contenedor principal que mostrara imagen de bienbenida-->\n");
+      out.write("       <div class=\"conteiner-sm\">\n");
+      out.write("            <h1>Formulario para la Gestion de Domicilios</h1>\n");
+      out.write("           <div class=\"row\">\n");
+      out.write("               \n");
+      out.write("           </div>\n");
       out.write("  </body>\n");
       out.write("</html>");
     } catch (Throwable t) {

@@ -125,7 +125,7 @@
                 -->
                 <div class="mb-3">
                     <label  class="form-label">Cantidad disponible</label>
-                    <input type="text" name="Cantidad" class="form-control"  aria-describedby="emailHelp">
+                    <input type="text" name="Precio" class="form-control"  aria-describedby="emailHelp">
                     <div class="form-text"></div>
                 </div>
                 <!--
@@ -134,7 +134,7 @@
                 -->
                 <div class="mb-3">
                     <label  class="form-label">Precio del producto</label>
-                    <input type="text" name="Precio" class="form-control"  aria-describedby="emailHelp">
+                    <input type="text" name="Cantidad" class="form-control"  aria-describedby="emailHelp">
                     <div  class="form-text"></div>
                 </div>
                 <!--
@@ -154,8 +154,8 @@
                 <input type="submit" name="modificar" value="enviar datos"/>
                 <input type="submit" name="eliminar" value="enviar datos"/>-->
                 <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
-                        <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
-                        <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
+                <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
+                <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
                 </form>
             
             

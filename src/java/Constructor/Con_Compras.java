@@ -10,6 +10,11 @@ public class Con_Compras {
     public Con_Compras() {
     }
 
+    public Con_Compras(String id_compra) {
+        this.id_compra = id_compra;
+    }
+    
+    
     public Con_Compras(String Cedula, String cod_pro, int cantidad, String id_compra) {
         this.Cedula = Cedula;
         this.cod_pro = cod_pro;
@@ -20,7 +25,7 @@ public class Con_Compras {
     public String getCedula() {
         return Cedula;
     }
-
+    
     public void setCedula(String Cedula) {
         this.Cedula = Cedula;
     }

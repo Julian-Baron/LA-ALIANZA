@@ -112,11 +112,11 @@ public class Sv_clientes extends HttpServlet {
                  in=md.eliminar_producto(con);
            
                 if(in){
-                    JOptionPane.showMessageDialog(null,"Datos modificados");
+                    JOptionPane.showMessageDialog(null,"Datos eliminados");
                    
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Datos NO modificados");
+                    JOptionPane.showMessageDialog(null,"Datos NO eliminados");
 
                 }    
                           
