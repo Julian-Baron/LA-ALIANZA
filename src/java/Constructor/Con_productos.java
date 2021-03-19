@@ -9,7 +9,9 @@ public class Con_productos {
     private String marca;
     private String nombre_pro;
     private String precio;
-
+    private String img;
+    
+    
     public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, String precio) {
         this.cod_pro = cod_pro;
         this.descripcion = descripcion;
@@ -19,6 +21,24 @@ public class Con_productos {
         this.precio = precio;
     }
 
+    public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, String precio, String img) {
+        this.cod_pro = cod_pro;
+        this.descripcion = descripcion;
+        this.disponibles = disponibles;
+        this.marca = marca;
+        this.nombre_pro = nombre_pro;
+        this.precio = precio;
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
     public Con_productos() {
     }
 

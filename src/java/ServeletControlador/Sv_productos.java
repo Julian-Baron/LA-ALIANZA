@@ -7,13 +7,18 @@ package ServeletControlador;
 
 import Constructor.Con_productos;
 import Modelos.Modelo_Productos;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +26,7 @@ import javax.swing.JOptionPane;
  * @author Trabajos
  */
 @WebServlet(name = "Sv_productos", urlPatterns = {"/Sv_productos"})
+@MultipartConfig
 public class Sv_productos extends HttpServlet {
 
     /**
@@ -36,7 +42,8 @@ public class Sv_productos extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            if (request.getParameter("enviar")!=null) {
+            
+            if (request.getParameter("enviar")!=null){
                 String a,b,c,e,f;
                 boolean in;
                 int d;
@@ -46,11 +53,32 @@ public class Sv_productos extends HttpServlet {
                 d=Integer.parseInt(request.getParameter("Cantidad"));
                 e=request.getParameter("Precio");
                 f=request.getParameter("Descripcion");
+                /*Almacenar imagen*/
                 
-                Con_productos con=new Con_productos(a, f, d, c, b, e);
+                JOptionPane.showMessageDialog(null, "Entro ");
+                
+                Part part=request.getPart("img");
+                
+                String nomfoto=part.getSubmittedFileName();
+                String nombre=b+" "+nomfoto;
+                
+                String url="D:\\Personal\\Documents\\NetBeansProjects\\Proyecto\\web\\img\\"+nombre;
+                String url2="img/"+nombre;
+                
+                InputStream file=part.getInputStream();
+                File fa=new File(url);
+                FileOutputStream sal=new FileOutputStream(fa);
+                
+                int num=file.read();
+                while(num!=-1){
+                    sal.write(num);
+                    num=file.read();
+                }
+                /*fin de almacenar imagen*/
+                Con_productos con=new Con_productos(a, f, d, c, b, e, url2);
                 Modelo_Productos md=new Modelo_Productos();
                 
-                 in=md.insertar_producto(con);
+                in=md.insertar_producto(con);
            
                 if(in){
                     JOptionPane.showMessageDialog(null,"Datos guardados");
@@ -60,7 +88,7 @@ public class Sv_productos extends HttpServlet {
                     JOptionPane.showMessageDialog(null,"Datos NO guardados");
 
                 }
-                 response.sendRedirect("formulario_Productos.jsp");         
+                response.sendRedirect("formulario_Productos.jsp");         
                 
             }
             if (request.getParameter("modificar")!=null) {
@@ -73,6 +101,25 @@ public class Sv_productos extends HttpServlet {
                 d=Integer.parseInt(request.getParameter("Cantidad"));
                 e=request.getParameter("Precio");
                 f=request.getParameter("Descripcion");
+                /*Almacenar imagen*/
+                Part part=request.getPart("img");
+                
+                String nomfoto=part.getSubmittedFileName();
+                String nombre=b+" "+nomfoto;
+                
+                String url="D:\\Personal\\Documents\\NetBeansProjects\\Proyecto\\web\\img"+nombre;
+                String url2="imagenes"+nombre;
+                
+                InputStream file=part.getInputStream();
+                File fa=new File(url);
+                FileOutputStream sal=new FileOutputStream(fa);
+                
+                int num=file.read();
+                while(num !=-1){
+                        sal.write(num);
+                        num=file.read();
+                }
+                /*fin de almacenar imagen*/
                 
                 Con_productos con=new Con_productos(a, f, d, c, b, e);
                 Modelo_Productos md=new Modelo_Productos();
@@ -95,7 +142,7 @@ public class Sv_productos extends HttpServlet {
                 boolean in;
                 int d;
                 a=request.getParameter("Codigo_pro");
-               
+                
                 
                 Con_productos con=new Con_productos(a);
                 Modelo_Productos md=new Modelo_Productos();

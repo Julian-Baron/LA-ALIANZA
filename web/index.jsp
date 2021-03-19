@@ -79,7 +79,7 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Cerrar Sesion</a>
+                              <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
                             </li>
                             
                           </ul>

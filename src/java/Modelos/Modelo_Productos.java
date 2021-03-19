@@ -31,7 +31,7 @@ Connection cnn=con.conexionbd();
         rs=ps.executeQuery();
         
         while(rs.next()){
-             Con_productos us=new Con_productos(rs.getString(1), rs.getString(6), rs.getInt(5), rs.getString(3), rs.getString(2), rs.getString(4));
+             Con_productos us=new Con_productos(rs.getString(1), rs.getString(6), rs.getInt(5), rs.getString(3), rs.getString(2), rs.getString(4), rs.getString(7));
             lista.add(us);
         }
     } 
@@ -48,13 +48,14 @@ Connection cnn=con.conexionbd();
     int x;
     
         try {
-            ps=cnn.prepareStatement("INSERT INTO producto  VALUES  (?,?,?,?,?,?)");
+            ps=cnn.prepareStatement("INSERT INTO producto  VALUES  (?,?,?,?,?,?,?)");
             ps.setString(1,us.getCod_pro());
             ps.setString(2,us.getNombre_pro());
             ps.setString(3, us.getMarca());
-             ps.setInt(4, us.getDisponibles());
+            ps.setInt(4, us.getDisponibles());
             ps.setString(5,us.getPrecio());
             ps.setString(6, us.getDescripcion());
+            ps.setString(7, us.getImg());
             x=ps.executeUpdate();
             
             if(x>0){
