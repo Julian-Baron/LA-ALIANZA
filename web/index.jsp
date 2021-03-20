@@ -9,7 +9,7 @@
 <%@page import="Constructor.Con_Domicilios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,6 +20,15 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/Style_index.css">
     
+    <!--Font-->
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/fonts.css">
+
     <title>Formularios de Gestion Clientes</title>
   </head>
   <body>
@@ -106,6 +115,8 @@
             </div>
                
            </div>
+           
+       
             <!--Contenedor de la pagina despues de la imagen. Almacenara toda la informacion correspondiente-->
             <div class="container-md">
             <section>
@@ -125,8 +136,160 @@
                     
                     </div>
                 </div>
+                
+         <header class="showcase">
+
+            <h2>CONTEXTUALIZACION</h2>
+            <p>Yopi`s Company es una corporacion estandar dedicada a la inversion y crecimiento de pequeñas empresas enfocadas a la tecnologia que buscan crecer para competir en el mercado con el fin de evolucionar el mundo como lo conocemos.</p>
+            <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
+
+
+        </header>
+    
+
+        <!--NEW CARDS-->
+
+        <div class="news-cards">
+
+            <div>
+
+                <img src="img/reaper.jpg" alt="Epic Reaper">
+                <h3>El mundo de los videojuegos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+           
+            </div>
+
+            <div>
+
+                <img src="img/supermarket.jpg" alt="ESTANTERIAS">
+                <h3>El mundo de los negocios</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+           
+            </div>
+
+            <div>
+
+                <img src="img/FONDO INICIO.jpg" alt="TECHNOLOID">
+                <h3>El mundo de las redes sociales</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+           
+            </div>
+
+            <div>
+
+                <img src="img/ESTANTES.png" alt="ESTANTERIAS">
+                <h3>El mundo de la comida</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+           
+            </div>
+
+
+        </div>
+
+            <section class="cards-banner-one">
+
+                <div class="content">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum tenetur laudantium tempore, vel exercitationem sunt quidem vitae expedita dicta aliquam.</p>
+                    
+                    <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
             </section>
-            </div>    
+
+            <div class="news-cards">
+
+                <div>
+    
+                    <img src="img/spiderman.jpg" alt="Parker">
+                    <h3>El mundo del entretenimiento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                    <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+               
+                </div>
+    
+                <div>
+    
+                    <img src="img/pulso.jpg" alt="Dinero">
+                    <h3>El mundo de las finanzas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                    <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+               
+                </div>
+    
+                <div>
+    
+                    <img src="img/FONDO INICIO.jpg" alt="TECHNOLOID">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                    <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+               
+                </div>
+    
+                <div>
+    
+                    <img src="img/IDEA.jpg" alt="BOMBILLOS">
+                    <h3>El mundo del arte.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores inventore nemo non ut fuga cupiditate reprehenderit impedit id accusantium!</p>
+                    <a href="#">Read More <i class="fas fa-angle-double-right"></i></a>
+               
+                </div>
+    
+    
+            </div>
+    
+            <section class="cards-banner-two">
+
+                <div class="content">
+
+                    <h2>Lorem, ipsum dolor.</h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id asperiores, expedita maiores aliquid labore temporibus dolore? Suscipit, rem? Quas.</p>
+
+                    <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
+
+                </div>
+
+            </section>
+
+            <section class="social">
+
+                <p>Contactanos!!!
+
+                    <div class="links">
+
+                <a href="#">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+
+                    </div>
+
+                </p>
+
+            </section>
+
+
+
+    </div>
             
   </body>
 </html>
