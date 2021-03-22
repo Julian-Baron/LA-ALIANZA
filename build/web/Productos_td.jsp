@@ -4,6 +4,7 @@
     Author     : Personal
 --%>
 
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
 <%@page import="Constructor.Con_productos"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,9 +12,7 @@
 
 <!--Busqueda de datos de los productos-->
 <%
-            ArrayList<Constructor.Con_productos> data=new ArrayList<>();
-            Constructor.Con_productos con=new Con_productos();
-            Modelos.Modelo_Productos mod=new Modelo_Productos();
+           
             
         %>
 <!DOCTYPE html>
@@ -29,6 +28,10 @@
     <link rel="stylesheet" href="css/Style_index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    
+        <!--ICONO-->
+    <link rel="icon" href="img/alianza_1.png">
+    
     <title>Formularios de Gestion Clientes</title>
   </head>
     <body font-family:'Arvo', serif;>
@@ -50,6 +53,8 @@
                           <ul class="navbar-nav">
                               <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li> <li class="nav-item">
+                                <a class="nav-link fas fa-cart-plus" aria-current="page" href="# ">Carrito<label><%request.getAttribute("contador");%></label></a>
                             </li>
                               <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,6 +76,9 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link " href="Formularios de gestion.jsp">Ver carrito</a>
+                            </li>
+                            <li class="nav-item">
                               <a class="nav-link" href="#">Cerrar Sesion</a>
                             </li>
                             
@@ -83,44 +91,52 @@
         
         
         <section>
-            <% /*Inicio de bucle para la busqueda de productos*/
+            
+            
+            <div class="container-xl" id="container-first">
+                <div class="row">
+                <%
+                /*Inicio de bucle para la busqueda de productos*/
+                ArrayList<Constructor.Con_productos> data=new ArrayList<>();
+                Constructor.Con_productos con=new Con_productos();
+                Modelos.Modelo_Productos mod=new Modelo_Productos();
                 data=mod.consultarusuarios();
-                for (int i = 0; i < data.size(); i++) {
+                for (int i = 0; i < data.size(); i++){
                         con=data.get(i);
                                             
-            %>
-            <div class="container-xl px-4">
-                <div class="row text-center align-self-center ">   
-                            <div class="card" style="width: 18rem;">
+                %>
+                  
+                    <div class="col-sm-4">
+                            <div class="card" style="">
                                 <img src="<%=con.getImg()%>" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title"><%=con.getNombre_pro()%></h5>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h1 class="card-header"><%=con.getNombre_pro()%></h1>
+                                    <div class="card-body text-center">
+                                      <p class="card-text">Precio=<%=con.getPrecio()%></p>
+                                      <p class="card-footer"><%=con.getDescripcion()%></p>
+                                      <div>
+                                          <a href="Sv_comprasCarrito?accion=agregar&id=<%=con.getCod_pro()%>" class="btn btn-outline-info">Agregar</a>
+                                          <a href="#" class="btn btn-dark">Comprar</a>
+                                      </div>
+                                      
                                    </div>
                             </div>
-                            <div class="card" style="width: 20rem; margin: 20px; padding: 0px">
-                                <img src="img/avatar-2155431_640.png" class="card-img-top" alt="..." style="height: 240px">
-                                <div class="card-body">
-                                    <a href="formulario_clientes.jsp" style="text-decoration: none"><h5 class="card-title">Formularios clientes</h5></a>
-                                  <p class="card-text">Gestion de clientes que se han registradro.</p>
-                                  <a href="formulario_clientes.jsp" class="btn btn-primary">Dirijirse...</a>
-                                </div>
-                            </div>
-                        </div>
-            </div>
-            <%
-            }
+                    </div>
+                                      <%
+                }
             /*Final del bucle*/
             %>
+                            
+                    </div>
+                </div>
+            </div>
+            
+            
         </section>
         
         
         <script>
             
-            $(function () {
-                $('[data-toggle="popover"]').popover()
-            });
+            
         </script>
     </body>
 </html>

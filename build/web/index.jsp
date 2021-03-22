@@ -9,7 +9,7 @@
 <%@page import="Constructor.Con_Domicilios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,9 +20,24 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/Style_index.css">
     
+    <!--Font-->
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!--ICONO-->
+    <link rel="icon" href="img/alianza_1.png">
+    
+    
     <title>Formularios de Gestion Clientes</title>
   </head>
   <body>
+      
+      
     
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -30,6 +45,7 @@
     
        <!-- inicio de la cabecera-->
         <header>
+            <div class="spinner"></div>
 		<!--<div class="wrapper">-->
 			
 			
@@ -95,8 +111,30 @@
            <div class="row">
                
                <div class="contenedor">
-                   <img class="img-fluid img-principal" src="img/supermercado_paginaprincipal.jpg" />
-               
+
+                   <!--CAROUSEL-->
+                   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/supermercado_paginaprincipal.jpg" class="img-fluid img-principal" alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="img/snack.jpg" class="img-fluid img-principal" alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="img/lefrute.jpg" class="img-fluid img-principal" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+           <!--END CAROUSEL-->    
                    <div class="centrado">BIENVENIDO A LA PAGINA DE SUPERMERCADOS LA ALIANZA</div>
                    
                    <div class="centrado-abajo">
@@ -106,27 +144,212 @@
             </div>
                
            </div>
+           
+       
             <!--Contenedor de la pagina despues de la imagen. Almacenara toda la informacion correspondiente-->
             <div class="container-md">
             <section>
                 <div class="container-md">
                     <div class="container " style="transform: translateX(20%)">
-                            <h1>Los mejores productos de calidad</h1>
+<!--                            <h1>Los mejores productos de calidad</h1>
                         </div>
                     <div class="row">
                         
-                    <div class="col-1 position-relative">
-                    <img src="img/face.png">
-                    </div>
+
                     <div class="col-10"><p>
-                        Esto es así porque los navegadores no reconocen un salto de línea, a no ser que se lo indiquemos específicamente. Para ello, empleamos otro tag nuevo. Se trata de <br>. Este tag no recibe ningún tipo de atributo y no tiene cierre, es decir, no existe </br>. Esto último es así porque, a diferencia de otros tags, este no establece un efecto sobre la página (como hace, por ejemplo, body, que tiene que marcar el principio y el final de los contenidos), sino que este tag ejecuta una acción puntual (un salto de línea). Veamos un ejemplo, modificación del código anterior. Tecléelo y guárdelo como salto_de_linea.htm.
+                       El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
+
                     </p>
                     </div>
                     
                     </div>
                 </div>
+    -->            
+    
+         <div class="showcase">
+
+            <h2>Los mejores productos de calidad</h2>
+            <p>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
+</p>
+            <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
+
+
+        </div>
+                
+            </section>    
+                    </div>
+                    
+                </div>
+                
+            </div>
+       </div>
+       
+
+
+            <section class="social">
+
+                <p>Contactanos!!!
+
+                    <div class="links">
+
+                <a href="#">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+
+                    </div>
+
+                </p>
+
             </section>
-            </div>    
+
+
+
+    </div>
+
+    <div class="footer-links">
+
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+                <li>
+                    <a href="#">Bloodlust</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+
+        <h3>Yopi`s Company Copyright &copy;</h3>
+        
+        
+
+    </footer>
+
+
+    </div>
             
   </body>
 </html>

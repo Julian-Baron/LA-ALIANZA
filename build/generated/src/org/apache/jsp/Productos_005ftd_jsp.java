@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.swing.JOptionPane;
 import Modelos.Modelo_Productos;
 import Constructor.Con_productos;
 import java.util.ArrayList;
@@ -51,11 +52,10 @@ public final class Productos_005ftd_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!--Busqueda de datos de los productos-->\n");
 
-            ArrayList<Constructor.Con_productos> data=new ArrayList<>();
-            Constructor.Con_productos con=new Con_productos();
-            Modelos.Modelo_Productos mod=new Modelo_Productos();
+           
             
         
       out.write("\n");
@@ -74,7 +74,7 @@ public final class Productos_005ftd_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <link href=\"https://fonts.googleapis.com/css2?family=Arvo&display=swap\" rel=\"stylesheet\">\n");
       out.write("    <title>Formularios de Gestion Clientes</title>\n");
       out.write("  </head>\n");
-      out.write("    <body font-family: 'Arvo', serif;>\n");
+      out.write("    <body font-family:'Arvo', serif;>\n");
       out.write("        \n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0\" crossorigin=\"anonymous\"></script>\n");
       out.write("        \n");
@@ -93,6 +93,10 @@ public final class Productos_005ftd_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                          <ul class=\"navbar-nav\">\n");
       out.write("                              <li class=\"nav-item\">\n");
       out.write("                              <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Inicio</a>\n");
+      out.write("                            </li> <li class=\"nav-item\">\n");
+      out.write("                                <a class=\"nav-link fas fa-cart-plus\" aria-current=\"page\" href=\"# \">Carrito<label>");
+request.getAttribute("contador");
+      out.write("</label></a>\n");
       out.write("                            </li>\n");
       out.write("                              <li class=\"nav-item dropdown\">\n");
       out.write("                              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n");
@@ -114,6 +118,9 @@ public final class Productos_005ftd_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                <a class=\"nav-link \" href=\"Formularios de gestion.jsp\">Volver</a>\n");
       out.write("                            </li>\n");
       out.write("                            <li class=\"nav-item\">\n");
+      out.write("                                <a class=\"nav-link \" href=\"Formularios de gestion.jsp\">Ver carrito</a>\n");
+      out.write("                            </li>\n");
+      out.write("                            <li class=\"nav-item\">\n");
       out.write("                              <a class=\"nav-link\" href=\"#\">Cerrar Sesion</a>\n");
       out.write("                            </li>\n");
       out.write("                            \n");
@@ -126,52 +133,66 @@ public final class Productos_005ftd_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        \n");
       out.write("        \n");
       out.write("        <section>\n");
-      out.write("            ");
- /*Inicio de bucle para la busqueda de productos*/
+      out.write("            \n");
+      out.write("            \n");
+      out.write("            <div class=\"container-xl\" id=\"container-first\">\n");
+      out.write("                <div class=\"row\">\n");
+      out.write("                ");
+
+                /*Inicio de bucle para la busqueda de productos*/
+                ArrayList<Constructor.Con_productos> data=new ArrayList<>();
+                Constructor.Con_productos con=new Con_productos();
+                Modelos.Modelo_Productos mod=new Modelo_Productos();
                 data=mod.consultarusuarios();
-                for (int i = 0; i < data.size(); i++) {
+                for (int i = 0; i < data.size(); i++){
                         con=data.get(i);
                                             
-            
+                
       out.write("\n");
-      out.write("            <div class=\"container-xl px-4\">\n");
-      out.write("                <div class=\"row text-center align-self-center \">   \n");
-      out.write("                            <div class=\"card\" style=\"width: 18rem;\">\n");
+      out.write("                  \n");
+      out.write("                    <div class=\"col-sm-4\">\n");
+      out.write("                            <div class=\"card\" style=\"\">\n");
       out.write("                                <img src=\"");
       out.print(con.getImg());
       out.write("\" class=\"card-img-top\" alt=\"...\">\n");
-      out.write("                                    <div class=\"card-body\">\n");
-      out.write("                                      <h5 class=\"card-title\">");
+      out.write("                                <h1 class=\"card-header\">");
       out.print(con.getNombre_pro());
-      out.write("</h5>\n");
-      out.write("                                      <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n");
-      out.write("                                      <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n");
+      out.write("</h1>\n");
+      out.write("                                    <div class=\"card-body text-center\">\n");
+      out.write("                                      <p class=\"card-text\">Precio=");
+      out.print(con.getPrecio());
+      out.write("</p>\n");
+      out.write("                                      <p class=\"card-footer\">");
+      out.print(con.getDescripcion());
+      out.write("</p>\n");
+      out.write("                                      <div>\n");
+      out.write("                                          <a href=\"Sv_comprasCarrito?accion=agregar&id=");
+      out.print(con.getCod_pro());
+      out.write("\" class=\"btn btn-outline-info\">Agregar</a>\n");
+      out.write("                                          <a href=\"#\" class=\"btn btn-dark\">Comprar</a>\n");
+      out.write("                                      </div>\n");
+      out.write("                                      \n");
       out.write("                                   </div>\n");
       out.write("                            </div>\n");
-      out.write("                            <div class=\"card\" style=\"width: 20rem; margin: 20px; padding: 0px\">\n");
-      out.write("                                <img src=\"img/avatar-2155431_640.png\" class=\"card-img-top\" alt=\"...\" style=\"height: 240px\">\n");
-      out.write("                                <div class=\"card-body\">\n");
-      out.write("                                    <a href=\"formulario_clientes.jsp\" style=\"text-decoration: none\"><h5 class=\"card-title\">Formularios clientes</h5></a>\n");
-      out.write("                                  <p class=\"card-text\">Gestion de clientes que se han registradro.</p>\n");
-      out.write("                                  <a href=\"formulario_clientes.jsp\" class=\"btn btn-primary\">Dirijirse...</a>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                        </div>\n");
-      out.write("            </div>\n");
-      out.write("            ");
+      out.write("                    </div>\n");
+      out.write("                                      ");
 
-            }
+                }
             /*Final del bucle*/
             
       out.write("\n");
+      out.write("                            \n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            \n");
+      out.write("            \n");
       out.write("        </section>\n");
       out.write("        \n");
       out.write("        \n");
       out.write("        <script>\n");
       out.write("            \n");
-      out.write("            $(function () {\n");
-      out.write("                $('[data-toggle=\"popover\"]').popover()\n");
-      out.write("            });\n");
+      out.write("            \n");
       out.write("        </script>\n");
       out.write("    </body>\n");
       out.write("</html>\n");

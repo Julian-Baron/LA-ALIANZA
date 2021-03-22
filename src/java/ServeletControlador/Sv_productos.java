@@ -41,28 +41,29 @@ public class Sv_productos extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try          
+        
+         (PrintWriter out = response.getWriter()) {
             
             if (request.getParameter("enviar")!=null){
-                String a,b,c,e,f;
+                String a,b,c,f;
                 boolean in;
-                int d;
+                int d,e;
                 a=request.getParameter("Codigo_pro");
                 b=request.getParameter("nombre");
                 c=request.getParameter("Marca");
                 d=Integer.parseInt(request.getParameter("Cantidad"));
-                e=request.getParameter("Precio");
+                e=Integer.parseInt(request.getParameter("Precio"));
                 f=request.getParameter("Descripcion");
                 /*Almacenar imagen*/
                 
-                JOptionPane.showMessageDialog(null, "Entro ");
-                
-                Part part=request.getPart("img");
+                                
+                Part part=request.getPart("imga");
                 
                 String nomfoto=part.getSubmittedFileName();
                 String nombre=b+" "+nomfoto;
                 
-                String url="D:\\Personal\\Documents\\NetBeansProjects\\Proyecto\\web\\img\\"+nombre;
+                String url="C:\\Users\\jyopa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto\\web\\img\\"+nombre;
                 String url2="img/"+nombre;
                 
                 InputStream file=part.getInputStream();
@@ -92,23 +93,23 @@ public class Sv_productos extends HttpServlet {
                 
             }
             if (request.getParameter("modificar")!=null) {
-                String a,b,c,e,f;
+                String a,b,c,f;
                 boolean in;
-                int d;
+                int d,e;
                 a=request.getParameter("Codigo_pro");
                 b=request.getParameter("nombre");
                 c=request.getParameter("Marca");
                 d=Integer.parseInt(request.getParameter("Cantidad"));
-                e=request.getParameter("Precio");
+                e=Integer.parseInt(request.getParameter("Precio"));
                 f=request.getParameter("Descripcion");
                 /*Almacenar imagen*/
-                Part part=request.getPart("img");
+                Part part=request.getPart("imga");
                 
                 String nomfoto=part.getSubmittedFileName();
                 String nombre=b+" "+nomfoto;
                 
-                String url="D:\\Personal\\Documents\\NetBeansProjects\\Proyecto\\web\\img"+nombre;
-                String url2="imagenes"+nombre;
+                String url="C:\\Users\\jyopa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto\\web\\img\\"+nombre;
+                String url2="img/"+nombre;
                 
                 InputStream file=part.getInputStream();
                 File fa=new File(url);
@@ -121,7 +122,7 @@ public class Sv_productos extends HttpServlet {
                 }
                 /*fin de almacenar imagen*/
                 
-                Con_productos con=new Con_productos(a, f, d, c, b, e);
+                Con_productos con=new Con_productos(a, f, d, c, b, e, url2);
                 Modelo_Productos md=new Modelo_Productos();
                 
                  in=md.modificar_producto(con);
@@ -160,6 +161,9 @@ public class Sv_productos extends HttpServlet {
                 response.sendRedirect("formulario_Productos.jsp");         
                 
             }
+            
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: "+e);
         }
     }
 

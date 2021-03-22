@@ -4,12 +4,13 @@
     Author     : Trabajos
 --%>
 
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Constructor.Con_productos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,6 +19,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_header.css">
+    
+        <!--ICONO-->
+    <link rel="icon" href="img/alianza_1.png">
     
     <title>Formularios de Gestion Clientes</title>
   </head>
@@ -95,7 +99,7 @@
             <h1>Formulario para la Gestion de Productos</h1>
             <div class="row">
                 <div id="section">
-                    <form action="Sv_productos" method="Post" name="formDatosPersonales" enctype="multipart/form-data">
+                <form action="Sv_productos" method="Post" name="formDatosPersonales" enctype="multipart/form-data">
                     
                 <div class="mb-3">
                     <label  class="form-label">Codigo de producto</label>
@@ -135,7 +139,7 @@
                 -->
                 <div class="mb-3">
                     <label  class="form-label">Precio del producto</label>
-                    <input type="text" name="Cantidad" class="form-control"  aria-describedby="emailHelp">
+                    <input type="number" name="Cantidad" class="form-control"  aria-describedby="emailHelp">
                     <div  class="form-text"></div>
                 </div>
                 <!--
@@ -150,7 +154,7 @@
                 
                 <div class="form-group mb-3">
                     <label  class="form-label">Seleccionar la imagen del producto</label> 
-                    <input type="file" name="img" class="form-control " id="exampleFormControlFile1">
+                    <input type="file" name="imga" class="form-control " id="exampleFormControlFile1">
                 </div>
                 <!--
                 <label for="asunto">Descripcion del producto</label>
@@ -186,7 +190,7 @@
                         Modelos.Modelo_Productos mu=new Modelo_Productos();
                         datosu=mu.consultarusuarios();
                         Con_productos  u=new Con_productos();
-
+                        JOptionPane.showMessageDialog(null, "Nombre ");
                         for(int i=0; i<datosu.size(); i++){
 
                         u=datosu.get(i);

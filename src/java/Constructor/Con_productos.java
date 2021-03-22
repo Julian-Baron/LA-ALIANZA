@@ -8,11 +8,11 @@ public class Con_productos {
     private int disponibles;
     private String marca;
     private String nombre_pro;
-    private String precio;
+    private int precio;
     private String img;
     
     
-    public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, String precio) {
+    public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, int precio) {
         this.cod_pro = cod_pro;
         this.descripcion = descripcion;
         this.disponibles = disponibles;
@@ -21,7 +21,7 @@ public class Con_productos {
         this.precio = precio;
     }
 
-    public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, String precio, String img) {
+    public Con_productos(String cod_pro, String descripcion, int disponibles, String marca, String nombre_pro, int precio, String img) {
         this.cod_pro = cod_pro;
         this.descripcion = descripcion;
         this.disponibles = disponibles;
@@ -88,11 +88,11 @@ public class Con_productos {
         this.nombre_pro = nombre_pro;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
     
