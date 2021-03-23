@@ -3,9 +3,9 @@ body{
 }
 
 #formularios1{
-    background: linear-gradient(130deg, rgba(235, 218, 75, 0.797) 0%, rgb(239, 255, 121) 3%, rgb(240, 252, 152 ) 21%, rgb(243, 249, 207 ) 100%);
+    background: /*linear-gradient(130deg, rgba(235, 218, 75, 0.797) 0%, rgb(239, 255, 121) 3%, rgb(240, 252, 152 ) 21%, rgb(243, 249, 207 ) 100%)*/orangered;
     width: 23%;
-    height: 490px;
+    height: 390px;
     text-align: center;
     margin-left: 35%;
     margin-top: 300px;
@@ -34,7 +34,7 @@ input{
 .doc{
     width: 265px;
     height: 55px;
-    font-family: fantasy;
+    font-family: 'Fredericka the Great', cursive;
     display: flex;
     font-size: 20px;   
     text-align: center;
@@ -42,7 +42,7 @@ input{
 .udsu{
     width: 495px;
     height: 55px;
-    font-family: Arial Black;
+    font-family: 'Fredericka the Great', cursive;
     display: flex;
     font-size: 28px;
     text-align: center;
