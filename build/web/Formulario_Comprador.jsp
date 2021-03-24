@@ -69,7 +69,7 @@
                             </div>
                     <div class="container"> 
                        
-                        <a class="navbar-brand" href="#">Menu</a>
+                        <a class="navbar-brand" href="index.jsp">Inicio</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -92,7 +92,7 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Cerrar Sesion</a>
+                                <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
                             </li>
                             
                           </ul>
@@ -162,7 +162,7 @@
                     </br>
                     </br>
                     <div id="section-tabla">
-                        <table class="table">
+                        <table class="table table-success table-striped">
                            <thead>
                              <tr>
                                  <th>Id_compra</th>

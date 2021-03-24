@@ -56,16 +56,23 @@
        <div id="formularios1"> 
         <form  id="for1" action="Sv_login" method="POST">
             
+            
+
+            
             <legend class="udsu">INGRESA TUS DATOS</legend>
             <input class="doc" type="text" name="usu" placeholder="USUARIO">
             <input class="doc" type="password" name="pas" placeholder="CONTRASEÑA">
             <input class="doc" id="" type="submit" name="btnlog" value="ENVIAR CONSULTA">
             
+            <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+            
             
         </form>
        </div>
         
-         <footer>
+        
                 
 
 <footer>
@@ -92,7 +99,7 @@
 
 
 
-    <body>
+    
       
     </body>
 </html>

@@ -78,11 +78,20 @@
                               <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   Formularios
+                                  
+<!--                       <button type="button" class="btn btn-lg btn-primary" disabled>Formulario Activo</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled>Formulario Inactivo</button>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+<button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+    -->                              
+                                  
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item nav-link " href="#">Formularios Clientes</a></li>
+                                  <li><a class="dropdown-item nav-link " href="formulario_clientes.jsp">Formularios Clientes</a></li>
                                 <li><a class="dropdown-item nav-link" href="formulario_Productos.jsp">Formularios Productos</a></li>
-                                <li><a class="dropdown-item nav-link active" href="#">Formularios Domicilios</a></li>
+                                <li><a class="dropdown-item nav-link active" href="Formulario_Domicilios.jsp">Formularios Domicilios</a></li>
                                 <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
                                 <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
                                 <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
@@ -104,7 +113,7 @@
             </nav>
        
 	</header>
-       <!--Contenedor principal que mostrara imagen de bienbenida-->
+       <!--Contenedor principal que mostrara imagen de bienvenida-->
        
        <div class="conteiner-sm">
             
@@ -135,7 +144,14 @@
   </button>
 </div>
            <!--END CAROUSEL-->    
-                   <div class="centrado">BIENVENIDO A LA PAGINA DE SUPERMERCADOS LA ALIANZA</div>
+           
+                       
+                   <div class="centrado">BIENVENIDO A LA PAGINA DE SUPERMERCADOS LA ALIANZA
+                   
+                       <section>Con los últimos acontecimientos a nivel mundial se ha podido contemplar los problemas que el mundo tiene que afrontar tomando como ejemplo el distanciamiento social, adicional a esto abordamos un problema que consiste en la falta de disponibilidad de los muchos usuarios para adquirir sus productos de la canasta familiar entre otros productos necesarios para la vida cotidiana.
+                       </section>>
+                   
+                   </div>
                    
                    <div class="centrado-abajo">
                     <button type="button" class="btn btn-light">SABER MÁS...</button>
@@ -169,8 +185,8 @@
          <div class="showcase">
 
             <h2>Los mejores productos de calidad</h2>
-            <p>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
-</p>
+            <section>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
+            </section>
             <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
 
 
@@ -184,11 +200,15 @@
             </div>
        </div>
        
+       
 
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
 
             <section class="social">
 
-                <p>Contactanos!!!
+                <p>PREGUNTAS FRECUENTES
 
                     <div class="links">
 
@@ -219,122 +239,164 @@
 
 
 
-    </div>
-
+   
     <div class="footer-links">
 
         <div class="footer-container">
             <ul>
                 <li>
                     <a href="#">
-                        <h3>Title One</h3>
+                        <h1></h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#">Bloodlust</a>
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿Donde se ubica el supermercado La Alianza?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+        Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal-->
                 </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
+  
+
+
             </ul>
             <ul>
                 <li>
                     <a href="#">
-                        <h3>Title One</h3>
+                        <h1></h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#">Bloodlust</a>
+                                                           <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿A que se dedica precisamente el supermercado La Alianza?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body">
+        Comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal-->
                 </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
+
+
+
+
             </ul>
             <ul>
                 <li>
                     <a href="#">
-                        <h3>Title One</h3>
+                        <h1></h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#">Bloodlust</a>
+                                                           <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿Como me puedo comunicar para solicitar mi servicio?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body">
+        Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal-->
                 </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
+ 
+
+
+
             </ul>
             <ul>
                 <li>
                     <a href="#">
-                        <h3>Title One</h3>
+                        <h1></h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#">Bloodlust</a>
+                                                           <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿Hasta donde realiza domicilios el supermercado La Alianza?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body">
+        Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal-->
                 </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
-                <li>
-                    <a href="#">Bloodlust</a>
-                </li>
+
+
+
+
             </ul>
         </div>
 
