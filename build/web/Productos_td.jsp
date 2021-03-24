@@ -4,6 +4,7 @@
     Author     : Personal
 --%>
 
+<%@page import="controllers.ControladorProducto"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
 <%@page import="Constructor.Con_productos"%>
@@ -13,7 +14,7 @@
 <!--Busqueda de datos de los productos-->
 <%
            
-            
+        controllers.ControladorProducto can=new ControladorProducto();
         %>
 <!DOCTYPE html>
 <html>
@@ -41,11 +42,15 @@
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
+<<<<<<< Upstream, based on i1/Yopi1
 
     
     <title>Formularios de Gestion Clientes</title>
+=======
+    <title>Productos</title>
+>>>>>>> 230e0e0 Nuevas clases para la gestion del carro de compras y js para el boton de eliminar, jsp nuevos para la presentacion del las compras
   </head>
-    <body font-family:'Arvo', serif;>
+    <body font-family="'Arvo', serif;">
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         
@@ -62,24 +67,6 @@
                           </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                           <ul class="navbar-nav">
-                              <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li> <li class="nav-item">
-                                <a class="nav-link fas fa-cart-plus" aria-current="page" href="# ">Carrito<label><%request.getAttribute("contador");%></label></a>
-                            </li>
-                              <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Formularios
-                              </a>
-                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item nav-link " href="#">Formularios Clientes</a></li>
-                                <li><a class="dropdown-item nav-link" href="formulario_Productos.jsp">Formularios Productos</a></li>
-                                <li><a class="dropdown-item nav-link active" href="#">Formularios Domicilios</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
-                              </ul>
-                            </li>                                               
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
@@ -87,7 +74,7 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="Formularios de gestion.jsp">Ver carrito</a>
+                                <a class="nav-link " href="Carrito.jsp"><img class="bi bi-cart" src="img/cart.svg"></i>Ver carrito</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Cerrar Sesion</a>
@@ -95,6 +82,7 @@
                             
                           </ul>
                         </div>
+                    
         
             </nav>
        
@@ -106,41 +94,14 @@
             
             <div class="container-xl" id="container-first">
                 <div class="row">
-                <%
-                /*Inicio de bucle para la busqueda de productos*/
-                ArrayList<Constructor.Con_productos> data=new ArrayList<>();
-                Constructor.Con_productos con=new Con_productos();
-                Modelos.Modelo_Productos mod=new Modelo_Productos();
-                data=mod.consultarusuarios();
-                for (int i = 0; i < data.size(); i++){
-                        con=data.get(i);
-                                            
-                %>
-                  
-                    <div class="col-sm-4">
-                            <div class="card" style="">
-                                <img src="<%=con.getImg()%>" class="card-img-top" alt="...">
-                                <h1 class="card-header"><%=con.getNombre_pro()%></h1>
-                                    <div class="card-body text-center">
-                                      <p class="card-text">Precio=<%=con.getPrecio()%></p>
-                                      <p class="card-footer"><%=con.getDescripcion()%></p>
-                                      <div>
-                                          <a href="Sv_comprasCarrito?accion=agregar&id=<%=con.getCod_pro()%>" class="btn btn-outline-info">Agregar</a>
-                                          <a href="#" class="btn btn-dark">Comprar</a>
-                                      </div>
-                                      
-                                   </div>
-                            </div>
-                    </div>
-                                      <%
-                }
-            /*Final del bucle*/
-            %>
-                            
-                    </div>
+                    <form>
+                       <div class="col-sm-4">
+                            <%=can.getProductos()%>
+                        </div>
+                    </form> 
                 </div>
             </div>
-            
+                    
             
         </section>
         

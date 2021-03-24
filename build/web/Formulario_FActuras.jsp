@@ -47,7 +47,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
        <!-- inicio de la cabecera-->
-         <header>        
+       <header id="container-first">        
 		<!--<div class="wrapper">-->
 			
 			
@@ -69,7 +69,7 @@
                             </div>
                     <div class="container"> 
                        
-                        <a class="navbar-brand" href="#">Menu</a>
+                        <a class="navbar-brand" href="index.jsp">Inicio</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -92,7 +92,7 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Cerrar Sesion</a>
+                                <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
                             </li>
                             
                           </ul>
@@ -170,7 +170,7 @@
                     
                     
                     <div id="section-tabla">
-                        <table class="table">
+                        <table class="table table-success table-striped">
                            <thead>
                              <tr>
                                  <th>Id_factura</th>

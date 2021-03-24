@@ -17,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -35,22 +36,23 @@ public class Sv_comprasCarrito extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     
-    
+    /*
     Con_productos conp=new Con_productos();
     Modelos.Modelo_Productos mod=new Modelo_Productos();
     ArrayList<Con_productos> listarproductos=new ArrayList<>();
     ArrayList<Con_carrito> listacarrito=new ArrayList<>();
+    Con_carrito cpro=new Con_carrito();
     int item;
     
     double totalapagar;
     int cantidad=1;
-    
+    */
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+        /*
         
         String accion=request.getParameter("accion");
         listarproductos=mod.consultarusuarios();
@@ -58,9 +60,12 @@ public class Sv_comprasCarrito extends HttpServlet {
             case "agregar":
                 item=item+1;
                 String idp=request.getParameter("id");
-                conp=mod.listar(idp);
-                Con_carrito cpro=new Con_carrito();
                 
+                JOptionPane.showMessageDialog(null, idp);
+                
+                conp=mod.listar(idp);
+                
+                a
                 cpro.setItem(item);
                 cpro.setCod_pro(conp.getCod_pro());
                 cpro.setNombre(conp.getNombre_pro());
@@ -75,15 +80,18 @@ public class Sv_comprasCarrito extends HttpServlet {
                 request.setAttribute("contador",listacarrito.size());
                 request.getRequestDispatcher("Productos_td.jsp").forward(request, response);
                 break;
-            case "comprar":
                 
-                
-                
+            case "Carrito":
+                totalapagar=0.0;
+                request.setAttribute("carrito", listacarrito);
+                request.getRequestDispatcher("Carrito.jsp").forward(request, response);
+                                
                 break;
             default:
-                request.setAttribute("productos", listarproductos);
+                request.setAttribute("productos", cpro.getItem()    );
                 request.getRequestDispatcher("Productos_td.jsp");
         }
+        */
         
     }
 

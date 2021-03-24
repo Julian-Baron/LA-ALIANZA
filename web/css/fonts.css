@@ -5,6 +5,42 @@ margin: 0;
 padding: 0;
 
 }
+.progress{
+    
+    
+progress-height:                   1rem;
+progress-font-size:                font-size-base .75;
+progress-bg:                       gray-200;
+progress-border-radius:            border-radius;
+progress-box-shadow:               box-shadow-inset;
+progress-bar-color:                red;
+progress-bar-bg:                   primary;
+progress-bar-animation-timing:     5s linear infinite;
+progress-bar-transition:           width .6s ease;
+
+
+
+}
+
+@ifenable-transitions {
+  @keyframes progress-bar-stripes {
+    0% { background-position-x: progress-height; }
+  }
+}
+
+.card-title{
+    
+    color: black;
+    
+}
+
+
+.card-text{
+    
+
+    color: black;
+    
+}
 
 body{
 
@@ -110,18 +146,28 @@ margin: 10px 0;
 
 }
 
+.centrado{
+    
+    font-family: monotype, cursive;
+    color: black;
+    font-size: 16px;
+    
+}
+
 .showcase{
 
+    color: black;
+    text-align: left;
     width: 100%;
     height: 550px;
-    background: url("../img/showcase.jpg") no-repeat left center/cover;
+    background: /*url("../img/showcase.jpg") no-repeat left center/cover*/transparent;
     padding: 50px;
     margin-bottom: 20px;
     display: table;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    
+    justify-content: flex-start;
+    font-family: Monotype,cursive;
 }
 
 .btn{
@@ -259,6 +305,8 @@ background: url("../img/anotherabstract.jpg") no-repeat center/cover ;
 
 .social p{
 
+    font-family: monotype, cursive;
+    color: black;
 text-align: center;
 font-size: 30px;
 margin-bottom: 20px;

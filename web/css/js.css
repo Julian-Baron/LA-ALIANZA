@@ -125,6 +125,8 @@ header{
     }
     
     #PiedePagina div{
+    
+        
         display: inline;
         float: left;
         padding: 10px;
@@ -135,3 +137,24 @@ header{
         font-size: 20px;
     }
 
+    /*RESPONSIVE*/
+
+    @media (max-width: 750px) {
+
+
+#PiedePagina{
+
+    display: block;
+    position: absolute;
+    top: 79%;
+    left: 0%;
+    background: #002064;
+    width: 5px;
+    height: 5px;
+    padding: 30px;
+    opacity: 0.7;
+  
+    transition: transform 0.5 ease-in-out;
+
+}
+    }   

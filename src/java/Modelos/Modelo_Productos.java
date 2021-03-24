@@ -15,31 +15,31 @@ import javax.swing.JOptionPane;
 
 public class Modelo_Productos {
     Conexion con=new Conexion();
-Connection cnn=con.conexionbd();
+    Connection cnn=con.conexionbd();
   
     PreparedStatement ps=null;
     ResultSet rs=null;
     
-    public Con_productos listar (String id){
-    String sql="SELECT * FROM `producto` WHERE cod_pro="+id;
-    Con_productos con=new Con_productos();
-    
-        try {
-            ps=cnn.prepareStatement(sql);
-            rs=ps.executeQuery();
-            while(rs.next()){
-                con.setCod_pro(rs.getString(1));
-                con.setNombre_pro(rs.getString(2));
-                con.setMarca(rs.getString(3));
-                con.setDisponibles(rs.getInt(4));
-                con.setPrecio(rs.getInt(5));
-                con.setDescripcion(rs.getString(6));
-                con.setImg(rs.getString(7));
-            }
-    } catch (Exception e) {
+    public Con_productos listar(String id){
+        
+        String sql="SELECT * FROM `producto` WHERE cod_pro='"+id+"';";
+        Con_productos productos=null;
+        
+        
+            try {
+                ps=cnn.prepareStatement(sql);
+                rs=ps.executeQuery();
+        
+        while(rs.next()){
+            productos=new Con_productos(rs.getString(1), rs.getString(6), rs.getInt(5), rs.getString(3), rs.getString(2), rs.getInt(4), rs.getString(7));
         }
-        return con;
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, e);
+        }
+            
+        return productos;
 }
+   
     
     public ArrayList<Con_productos> consultarusuarios(){
      ArrayList <Con_productos> lista=new ArrayList<>();
@@ -140,4 +140,6 @@ Connection cnn=con.conexionbd();
 
         return dat;
     }
+    
 }
+ 
