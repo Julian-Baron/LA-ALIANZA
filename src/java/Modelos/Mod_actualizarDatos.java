@@ -52,14 +52,16 @@ public class Mod_actualizarDatos {
             String consulta="UPDATE `clientes` SET `cedula`=[value-1],`nombre_cli`=[value-2],`apellido_cli`=[value-3],`correo_cli`=[value-4],`direccion_cli`=[value-5],`telefono_cli`=[value-6] WHERE 1";
             ps=cnn.prepareStatement(consulta);
             x=ps.executeUpdate();
+            if(x>0){
+                dat=true;
+            }
             
         } catch (Exception e) {
-        
-        
+            JOptionPane.showMessageDialog(null,"Error al actualizar los datos de usuarios"+e);
         }
         
         
-        
+       return dat; 
     }
             
 }
