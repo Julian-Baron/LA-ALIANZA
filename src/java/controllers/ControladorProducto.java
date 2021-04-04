@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package controllers;
 
 import Constructor.Con_productos;
 import Modelos.Modelo_Productos;
+
 
 /**
  *
@@ -20,6 +22,7 @@ public class ControladorProducto {
         
         for(Con_productos con: mp.consultarusuarios()){
             htmlcode  +="<div class=\"card\" style=\"\">\n" +
+
 "                                <img src=\""+con.getImg()+"\" class=\"card-img-top\" alt=\"...\">\n" +
 "                                <h1 class=\"card-header\">"+con.getNombre_pro()+"</h1>\n" +
 "                                    <div class=\"card-body text-center\">\n" +
@@ -27,6 +30,7 @@ public class ControladorProducto {
 "                                      <p class=\"card-footer\">"+con.getDescripcion()+"</p>\n" +
 "                                      <div>\n" +
 "                                          <a href=\"producto-detalles.jsp?id="+con.getCod_pro()+"\" class=\"btn btn-outline-info\">Ver detalles</a>\n" +
+
 "                                      </div>\n" +
 "                                      \n" +
 "                         </div>\n";                                                          
@@ -34,7 +38,7 @@ public class ControladorProducto {
         
         return htmlcode;
     }
-    
+
     public Con_productos getproducto(String id){
         
         return new Modelos.Modelo_Productos().listar(id);

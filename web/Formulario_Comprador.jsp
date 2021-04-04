@@ -22,7 +22,9 @@
        <!--Font-->
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
     
 
     <!--CSS-->
@@ -110,9 +112,9 @@
                     <form action="Sv_compras" target="" method="Post" name="formDatosPersonales">
 
                         <div class="mb-3">
-                        <label class="form-label">Id_compra</label>
-                        <input type="text" name="id_compra" class="form-control" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text"></div>
+                            <label class="form-label">Id_compra</label>
+                                <input type="text" name="id_compra" class="form-control" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                        
 
@@ -141,7 +143,7 @@
                         <input type="submit" name="eliminar" class="btn btn-primary" value="Eliminar">
                         <input type="submit" name="modificar" class="btn btn-secondary" value="Modificar">    
                         <input type="submit" name="enviar" class="btn btn-warning" value="Insertar">
-                       
+                        </div>
                         <!--<label for="telefono">Rol</label>
                         <input type="email" name="rol" id="email" placeholder="Correo"  />
 

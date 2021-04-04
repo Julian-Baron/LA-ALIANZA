@@ -23,7 +23,9 @@
     <!--Font-->
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
     
 
     <!--CSS-->
@@ -79,6 +81,9 @@
                               <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="Productos_td.jsp">Productos</a>
+                            </li>
                               <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   Formularios
@@ -94,7 +99,8 @@
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                                  <li><a class="dropdown-item nav-link" href="index.jsp">Acción no disponible, inicie sesion para habilitar sus respectivos formularios</a></li>
+                                <li><a class="dropdown-item nav-link" href="index.jsp">Acción no disponible, inicie sesion para habilitar sus respectivos formularios</a></li>
+
                               </ul>
                             </li>                                               
                             <li class="nav-item">

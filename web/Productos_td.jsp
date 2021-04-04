@@ -4,6 +4,7 @@
     Author     : Personal
 --%>
 
+<%@page import="controllers.ControladorProducto"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
 <%@page import="Constructor.Con_productos"%>
@@ -13,7 +14,7 @@
 <!--Busqueda de datos de los productos-->
 <%
            
-            
+        controllers.ControladorProducto can=new ControladorProducto();
         %>
 <!DOCTYPE html>
 <html>
@@ -41,13 +42,12 @@
 
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
-    
 
-    
-    <title>Formularios de Gestion Clientes</title>
+    <title>Productos</title>
   </head>
+
     <body font-family:'Arvo', serif; >
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         
         <header>
@@ -63,6 +63,7 @@
                           </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                           <ul class="navbar-nav">
+
                               <li class="nav-item">
                                   <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
                             </li> <li class="nav-item">
@@ -81,6 +82,7 @@
                                 <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
                               </ul>
                             </li>                                               
+
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
                             </li>
@@ -88,7 +90,7 @@
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="Formularios de gestion.jsp">Ver carrito</a>
+                                <a class="nav-link " href="Carrito.jsp"><img class="bi bi-cart" src="img/cart.svg"></i>Ver carrito</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
@@ -96,6 +98,7 @@
                             
                           </ul>
                         </div>
+                    
         
             </nav>
        
@@ -107,41 +110,14 @@
             
             <div class="container-xl" id="container-first" style="color: black">
                 <div class="row">
-                <%
-                /*Inicio de bucle para la busqueda de productos*/
-                ArrayList<Constructor.Con_productos> data=new ArrayList<>();
-                Constructor.Con_productos con=new Con_productos();
-                Modelos.Modelo_Productos mod=new Modelo_Productos();
-                data=mod.consultarusuarios();
-                for (int i = 0; i < data.size(); i++){
-                        con=data.get(i);
-                                            
-                %>
-                  
-                    <div class="col-sm-4">
-                            <div class="card" style="">
-                                <img src="<%=con.getImg()%>" class="card-img-top" alt="...">
-                                <h1 class="card-header"><%=con.getNombre_pro()%></h1>
-                                    <div class="card-body text-center">
-                                      <p class="card-text">Precio=<%=con.getPrecio()%></p>
-                                      <p class="card-footer"><%=con.getDescripcion()%></p>
-                                      <div>
-                                          <a href="Sv_comprasCarrito?accion=agregar&id=<%=con.getCod_pro()%>" class="btn btn-outline-info">Agregar</a>
-                                          <a href="#" class="btn btn-dark">Comprar</a>
-                                      </div>
-                                      
-                                   </div>
-                            </div>
-                    </div>
-                                      <%
-                }
-            /*Final del bucle*/
-            %>
-                            
-                    </div>
+                    <form>
+                       <div class="col-sm-4">
+                            <%=can.getProductos()%>
+                        </div>
+                    </form> 
                 </div>
             </div>
-            
+                    
             
         </section>
         
