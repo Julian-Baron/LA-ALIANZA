@@ -23,7 +23,7 @@
     <!--Font-->
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     
 
     <!--CSS-->
@@ -32,8 +32,12 @@
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
+    <!--PEGAJOSO-->
     
-    <title>Formularios de Gestion Clientes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>Ya no Soy admin :'v</title>
   </head>
   <body>
       
@@ -45,7 +49,7 @@
     
        <!-- inicio de la cabecera-->
         <header>
-            <div class="spinner"></div>
+            
 		<!--<div class="wrapper">-->
 			
 			
@@ -61,7 +65,7 @@
                             
         
              <!--</div>-->
-                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #DEB916">
+                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #DEB916" >
                     <div class="logo">Supermercado la Alianza                       
                             <img src="img/shopping-cart-2020929_640.png " class="" >
                             </div>
@@ -89,20 +93,14 @@
                                   
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                  <li><a class="dropdown-item nav-link " href="formulario_clientes.jsp">Formularios Clientes</a></li>
-                                <li><a class="dropdown-item nav-link" href="formulario_Productos.jsp">Formularios Productos</a></li>
-                                <li><a class="dropdown-item nav-link active" href="Formulario_Domicilios.jsp">Formularios Domicilios</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
+
+                                  <li><a class="dropdown-item nav-link" href="index.jsp">Acción no disponible, inicie sesion para habilitar sus respectivos formularios</a></li>
                               </ul>
                             </li>                                               
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
-                            </li>
+             
                             <li class="nav-item">
                               <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
                             </li>
@@ -125,10 +123,10 @@
                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/supermercado_paginaprincipal.jpg" class="img-fluid img-principal" alt="...">
+        <img src="img/snack.jpg" class="img-fluid img-principal" alt="...">
     </div>
     <div class="carousel-item">
-        <img src="img/snack.jpg" class="img-fluid img-principal" alt="...">
+        <img src="img/supermercado_paginaprincipal.jpg" class="img-fluid img-principal" alt="...">
     </div>
     <div class="carousel-item">
         <img src="img/lefrute.jpg" class="img-fluid img-principal" alt="...">
@@ -149,14 +147,13 @@
                    <div class="centrado">BIENVENIDO A LA PAGINA DE SUPERMERCADOS LA ALIANZA
                    
                        <section>Con los últimos acontecimientos a nivel mundial se ha podido contemplar los problemas que el mundo tiene que afrontar tomando como ejemplo el distanciamiento social, adicional a esto abordamos un problema que consiste en la falta de disponibilidad de los muchos usuarios para adquirir sus productos de la canasta familiar entre otros productos necesarios para la vida cotidiana.
-                       </section>>
+                       </section>
+                       
+                       
                    
                    </div>
                    
-                   <div class="centrado-abajo">
-                    <button type="button" class="btn btn-light">SABER MÁS...</button>
 
-                   </div>
             </div>
                
            </div>
@@ -182,16 +179,16 @@
                 </div>
     -->            
     
-         <div class="showcase">
+    <li  class="showcase">
 
             <h2>Los mejores productos de calidad</h2>
-            <section>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
-            </section>
-            <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
+            <article>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
+            </article>
+<div class="spinner"></div>
 
 
-        </div>
-                
+        </li>
+
             </section>    
                     </div>
                     
@@ -208,7 +205,7 @@
 
             <section class="social">
 
-                <p>PREGUNTAS FRECUENTES
+                <p>¿TIENES DUDAS?
 
                     <div class="links">
 
@@ -279,11 +276,45 @@
   </div>
 </div>
 <!--Fin Modal-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  ¿A que se dedica precisamente el supermercado La Alianza?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+     
+    <div class="modal-content">
+        
+      <div class="modal-header">
+          
+        <h5 class="modal-title" id="exampleModalLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+          El supermercado La Alianza dispone de un comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Fin Modal-->
+
                 </li>
   
 
 
             </ul>
+
             <ul>
                 <li>
                     <a href="#">
@@ -291,9 +322,10 @@
                     </a>
                 </li>
                 <li>
-                                                           <!-- Button trigger modal -->
+
+<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  ¿A que se dedica precisamente el supermercado La Alianza?
+  ¿Como me puedo comunicar con el supermercado?
 </button>
 
 <!-- Modal -->
@@ -301,78 +333,75 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+                          <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+          El supermercado La Alianza dispone de un comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        
-        
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
   </div>
 </div>
-<!--Fin Modal-->
-                </li>
-
-
-
-
-            </ul>
-            <ul>
-                <li>
-                    <a href="#">
-                        <h1></h1>
-                    </a>
-                </li>
-                <li>
-                                                           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  ¿Como me puedo comunicar para solicitar mi servicio?
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-      </div>
-      <div class="modal-body">
-        Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        
-        
-      </div>
-    </div>
-  </div>
-</div>
-<!--Fin Modal-->
-                </li>
- 
-
-
-
-            </ul>
-            <ul>
-                <li>
-                    <a href="#">
-                        <h1></h1>
-                    </a>
-                </li>
-                <li>
-                                                           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   ¿Hasta donde realiza domicilios el supermercado La Alianza?
 </button>
 
 <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+     
+    <div class="modal-content">
+        
+      <div class="modal-header">
+          
+        <h5 class="modal-title" id="exampleModalLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+          El supermercado La Alianza dispone de un comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Fin Modal-->
+
+                </li>
+  
+
+
+            </ul>
+            
+                        <ul>
+                <li>
+                    <a href="#">
+                        <h1></h1>
+                    </a>
+                </li>
+                <li>
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿Donde se ubica el supermercado La Alianzassssssssssss?
+</button>
+
+<!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -381,6 +410,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
       </div>
       <div class="modal-body">
+          <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
         Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
       </div>
       <div class="modal-footer">
@@ -392,12 +424,120 @@
   </div>
 </div>
 <!--Fin Modal-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  ¿A que se dedica precisamente el supermercado La Alianzassssssssssss?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+     
+    <div class="modal-content">
+        
+      <div class="modal-header">
+          
+        <h5 class="modal-title" id="exampleModalLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+          El supermercado La Alianza dispone de un comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Fin Modal-->
+
                 </li>
-
-
+  
 
 
             </ul>
+            
+                        <ul>
+                <li>
+                    <a href="#">
+                        <h1></h1>
+                    </a>
+                </li>
+                <li>
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  ¿Donde se ubica el supermercado La Alianzazzzzzzzzzzzzz?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+        Tambien llamado "Autoservicio La Alianza" nuestra sucursal principal se ubica actualmente en Cl. 19 Este, Madrid, Cundinamarca...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  ¿A que se dedica precisamente el supermercado La Alianzazzzzzzzzzzzz?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+     
+    <div class="modal-content">
+        
+      <div class="modal-header">
+          
+        <h5 class="modal-title" id="exampleModalLabel">Estimado usuario:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Generando factura PDF</div>
+</div>
+          El supermercado La Alianza dispone de un comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos bebidas o tabaco.
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Fin Modal-->
+
+                </li>
+  
+
+
+            </ul>
+
         </div>
 
     </div>
@@ -412,6 +552,13 @@
 
 
     </div>
-            
+       
+                    <!--SCROLLREVEAL-->
+<script src="https://unpkg.com/scrollreveal"></script>
+   
+<!--CUSTOM JS-->
+    <script src="main.js"></script>
+
+                    
   </body>
 </html>

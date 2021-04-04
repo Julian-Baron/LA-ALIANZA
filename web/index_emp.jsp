@@ -32,12 +32,8 @@
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
-    <!--PEGAJOSO-->
     
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    
-    <title>Ya no Soy admin :'v</title>
+    <title>Soy empleado :v</title>
   </head>
   <body>
       
@@ -49,7 +45,7 @@
     
        <!-- inicio de la cabecera-->
         <header>
-            
+            <div class="spinner"></div>
 		<!--<div class="wrapper">-->
 			
 			
@@ -65,7 +61,7 @@
                             
         
              <!--</div>-->
-                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #DEB916" >
+                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #DEB916">
                     <div class="logo">Supermercado la Alianza                       
                             <img src="img/shopping-cart-2020929_640.png " class="" >
                             </div>
@@ -93,14 +89,21 @@
                                   
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                                  <li><a class="dropdown-item nav-link" href="index.jsp">Acción no disponible, inicie sesion para habilitar sus respectivos formularios</a></li>
+                                  <li><a class="dropdown-item nav-link " href="formulario_clientes.jsp">Formularios Clientes</a></li>
+                                <li><a class="dropdown-item nav-link" href="formulario_Productos.jsp">Formularios Productos</a></li>
+                                <li><a class="dropdown-item nav-link active" href="Formulario_Domicilios.jsp">Formularios Domicilios</a></li>
+                                <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
+                                <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
+                                <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
+                                <li><a class="dropdown-item nav-link" href="Carrito.jsp">Carrito de Compras</a></li>
                               </ul>
                             </li>                                               
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
-             
+                            <li class="nav-item">
+                                <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
+                            </li>
                             <li class="nav-item">
                               <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
                             </li>
@@ -179,15 +182,15 @@
                 </div>
     -->            
     
-    <li  class="showcase">
+    <a  class="showcase">
 
             <h2>Los mejores productos de calidad</h2>
             <article>El supermercado la Alianza cuenta  con un sistema de domicilio eficaz el cual consiste en un paso a paso desde el cual el cliente solicita su pedido mediante vía telefónica cuya relación uno a muchos le permite al cliente adquirir gran cantidad de productos , los empleados toman nota del pedido y los datos del cliente como la dirección, el  nombre del usuario, el apellido y su edad en una libreta  junto con los productos solicitados donde la relación muchos a muchos hace que el empleado pueda organizar la información y los datos del pedido de manera eficaz q e inmediatamente se le informa al encargado del domicilio acerca del pedido y se le brindan los datos del cliente para su respectiva entrega donde la relación muchos a uno toma lugar al momento de entregar los productos del cliente confirmando los datos descritos por el cliente y se analiza la calidad de estos y si cumple las condiciones pactadas se finaliza el  proceso o de lo contrario se repite el proceso para cumplir con las condiciones estipuladas.
             </article>
-<div class="spinner"></div>
+            <a href="#" class="btn">Read More <i class="fas fa-angle-double-right"></i></a>
 
 
-        </li>
+        </a>
 
             </section>    
                     </div>

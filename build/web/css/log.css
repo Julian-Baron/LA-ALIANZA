@@ -35,7 +35,7 @@ input{
 .doc{
     width: 265px;
     height: 55px;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     font-size: 20px;   
     text-align: center;
@@ -43,7 +43,7 @@ input{
 .udsu{
     width: 495px;
     height: 55px;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     font-size: 28px;
     text-align: center;

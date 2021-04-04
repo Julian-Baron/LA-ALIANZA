@@ -33,7 +33,7 @@ header{
    
 }
 @font-face{
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Orbitron', sans-serif;
 }
 #menu_p{
     color: rgb (231, 248, 104) ;
@@ -42,7 +42,7 @@ header{
     font-size: 15px;
     padding-top: 3px;
     
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Orbitron', sans-serif;
     border-right: #5de1ea;
 }
 #menu_p li{
@@ -106,7 +106,7 @@ header{
         border-radius: 12px;
         width: 320px;
         margin: 50px;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Orbitron', sans-serif;
         font-size: 50px;
         padding: 300px;
         margin-left: 25px;
@@ -119,7 +119,7 @@ header{
         height: 95px;
         margin-top: 10px;
         float: right;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Orbitron', sans-serif;
         font-size: 48px;
         height: auto;
     }
@@ -133,7 +133,7 @@ header{
         margin-bottom: 10px;
         flex-direction:row;
         margin-left: 100px;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Orbitron', sans-serif;
         font-size: 20px;
     }
 
