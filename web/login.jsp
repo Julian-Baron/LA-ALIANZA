@@ -20,8 +20,9 @@
            <!--Font-->
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
 
     <!--CSS-->
     <link rel="stylesheet" href="css/fonts.css">

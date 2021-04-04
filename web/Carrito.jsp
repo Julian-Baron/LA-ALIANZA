@@ -28,11 +28,18 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/Style_index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    
+
     
         <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/fonts.css">
+
     <title>Productos</title>
   </head>
     <body>
@@ -53,9 +60,10 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">   
                           <ul class="navbar-nav">
                               <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+
+                                  <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
                             </li> <li class="nav-item">
-                                <a class="nav-link fas fa-cart-plus" aria-current="page" href="Productos_td.jsp">Seguir comprando<label><%request.getAttribute("contador");%></label></a>
+                                <a class="nav-link fas fa-cart-plus"  aria-current="page" href="Productos_td.jsp">Seguir comprando<label><%request.getAttribute("contador");%></label></a>
                             </li>
                               <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,7 +79,9 @@
                             </li>                          
                                 
                                 <li class="nav-item">
-                                  <a class="nav-link" href="#">Cerrar Sesion</a>
+
+                                    <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
+
                                 </li>
                             
                           </ul>
@@ -84,10 +94,12 @@
                             
         <section>
             <div class="container mt-4" >
-                <div class="fs-2">Compras generadas </div>
+
+                <div class="fs-2" style="color: black" >Compras generadas </div>
                 <div class="row">
                     <div class="col-xl-8">
-                        <table border="1" class="table table-hover" id="shop-table">
+                        <table class="table table-success table-striped">
+
                             <thead>
                                 
                                     <tr>                
@@ -132,16 +144,19 @@
                                     %>
                             </tbody>
                         </table>
-                            <% if(articulos == null){%>
-                                 <span>No hay articulos en el carro</span>
+
+                            <% if(articulos == null){%
+                            <span style="color: black" >No hay articulos en el carro</span>
                             <%}%>
+
                     </div>
                     
                             
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">
-                                <div class="fs-2">Compras generadas</div>
+                            <div class="card-header" style="color: black">
+                                <div class="fs-2" >Compras generadas</div>
+
                             </div>
                         </div>
                         <div class="card-body">

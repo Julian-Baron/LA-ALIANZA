@@ -23,8 +23,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/Style_index.css">
+
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
     
         <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
@@ -50,7 +53,9 @@
                           <ul class="navbar-nav">                         
                                                                       
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+
+                                <a class="nav-link active" aria-current="page" href="index.jsp">Inicio</a>
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
@@ -59,7 +64,9 @@
                                 <a class="nav-link " href="Carrito.jsp"><img class="bi bi-cart" src="img/cart.svg"></i>Ver carrito</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Cerrar Sesion</a>
+
+                                <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
+
                             </li>
                             
                           </ul>
@@ -78,7 +85,9 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="card">
+
+                    <div class="card" style="color: black">
+
                         <form action="agregarproducto" method="post">
                             <div class="card-header"><%=producto.getNombre_pro()%></div>
                             <div class="card-body"><b>Precio</b>  $<%=producto.getPrecio()%>.00</div>

@@ -46,7 +46,7 @@ and open the template in the editor.
         height: 95px;
         margin-top: 250px;
         float: right;
-        font-family: 'Fredericka the Great', cursive;
+        font-family: 'Orbitron', sans-serif;
         height: auto;
     }
     
@@ -57,6 +57,7 @@ and open the template in the editor.
         margin-top: 100px;
         flex-direction:row;
         margin-left: 100px;
-        font-family: 'Fredericka the Great', cursive;
+        font-size: 16px;
+        font-family: 'Orbitron', sans-serif;
     }
 
