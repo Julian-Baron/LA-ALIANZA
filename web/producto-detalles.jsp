@@ -1,20 +1,16 @@
 <%-- 
-    Document   : Productos_td
-    Created on : 14/03/2021, 11:29:37 AM
+    Document   : producto-detalles
+    Created on : 23/03/2021, 08:36:22 PM
     Author     : Personal
 --%>
 
-<%@page import="controllers.ControladorProducto"%>
 <%@page import="javax.swing.JOptionPane"%>
-<%@page import="Modelos.Modelo_Productos"%>
 <%@page import="Constructor.Con_productos"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="controllers.ControladorProducto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!--Busqueda de datos de los productos-->
 <%
-           
-        controllers.ControladorProducto can=new ControladorProducto();
+        String id=request.getParameter("id");
+        Con_productos producto=new ControladorProducto().getproducto(id);        
         %>
 <!DOCTYPE html>
 <html>
@@ -30,25 +26,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
     
-       <!--Font-->
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/fonts.css">
-
-    <!--ICONO-->
+        <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
-<<<<<<< Upstream, based on i1/Yopi1
-
-    
-    <title>Formularios de Gestion Clientes</title>
-=======
     <title>Productos</title>
->>>>>>> 230e0e0 Nuevas clases para la gestion del carro de compras y js para el boton de eliminar, jsp nuevos para la presentacion del las compras
   </head>
     <body font-family="'Arvo', serif;">
         
@@ -66,7 +47,8 @@
                             <span class="navbar-toggler-icon"></span>
                           </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                          <ul class="navbar-nav">
+                          <ul class="navbar-nav">                         
+                                                                      
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
@@ -88,27 +70,28 @@
        
 	</header>
         
-        
-        <section>
-            
-            
-            <div class="container-xl" id="container-first">
-                <div class="row">
-                    <form>
-                       <div class="col-sm-4">
-                            <%=can.getProductos()%>
-                        </div>
-                    </form> 
+       
+        <div class="container-xl" id="container-first">
+            <div class="row text-center">
+                <div class="col-xl-7">
+                    <img src="<%=producto.getImg()%>" width="320px">
                 </div>
-            </div>
-                    
-            
-        </section>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <form action="agregarproducto" method="post">
+                            <div class="card-header"><%=producto.getNombre_pro()%></div>
+                            <div class="card-body"><b>Precio</b>  $<%=producto.getPrecio()%>.00</div>
+                            <div class="card-body"><label><b>Descripcion  :</b></label></div>
+                            <div class="card-body"><label><%=producto.getDescripcion()%></label></div>
+                            <input type="text" value="<%=producto.getCod_pro()%>" name="id" hidden="">
+                            <div class="card-footer"><label>Cantidad <input type="number" value="1" id="" class="fw-bold text-center" name="cantidad"></label></div>
+                            <button class="btn btn-warning  m-2">Añadir a carrito</button>
+                        </form>          
+                    </div>
+                </div>     
+                
+        </div>
         
-        
-        <script>
-            
-            
-        </script>
     </body>
 </html>

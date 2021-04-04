@@ -14,13 +14,13 @@
          <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         
-        <link rel="stylesheet" href="css/js.css">
-        <link rel="stylesheet" href="css/tbl.css">
-        <link rel="stylesheet" href="css/log.css">  
+    <link rel="stylesheet" href="css/js.css">
+    <link rel="stylesheet" href="css/tbl.css">
+    <link rel="stylesheet" href="css/log.css">  
            <!--Font-->
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     
 
     <!--CSS-->
@@ -28,8 +28,8 @@
 
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>¡Bienvenido al supermercado La Alianza!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>¡Bienvenido al supermercado La Alianza!</title>
     </head>
     <body>
         
