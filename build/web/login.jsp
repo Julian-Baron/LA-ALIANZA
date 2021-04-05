@@ -3,7 +3,12 @@
     Created on : 2/03/2021, 07:27:02 PM
     Author     : Personal
 --%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,9 +26,8 @@
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
-    
 
     <!--CSS-->
     <link rel="stylesheet" href="css/fonts.css">

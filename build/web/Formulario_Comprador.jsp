@@ -8,6 +8,12 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Constructor.Con_Compras"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +25,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_header.css">
     
-       <!--Font-->    
+       <!--Font-->
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">    
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    
 
     <!--CSS-->
     <link rel="stylesheet" href="css/fonts.css">

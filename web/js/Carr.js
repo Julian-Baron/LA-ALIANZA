@@ -22,8 +22,11 @@ $(function(){
    });
    
    var elementostabla = $('#shop-table tr');
-
-   alert(elementostabla.lenght);
+    alert(elementostabla);
+   
+});
+   
+  
 
 
 

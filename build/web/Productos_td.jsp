@@ -3,7 +3,12 @@
     Created on : 14/03/2021, 11:29:37 AM
     Author     : Personal
 --%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page import="controllers.ControladorProducto"%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
@@ -42,14 +47,12 @@
 
     <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
-    
 
     <title>Productos</title>
   </head>
 
     <body font-family:'Arvo', serif; >
 
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         
         <header>
