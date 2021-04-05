@@ -16,6 +16,11 @@
          <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/doc.js"></script>
         
+           <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles_header.css">
+    <link rel="stylesheet" href="css/Style_index.css">
+        
          <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         
@@ -70,8 +75,8 @@
             <input class="doc" type="password" name="pas" placeholder="CONTRASEÑA">
             <input class="doc" id="" type="submit" name="btnlog" value="ENVIAR CONSULTA">
             
-            <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">CARGANDO DATOS</div>
 </div>
             
             
@@ -84,7 +89,7 @@
 <footer>
         <legend id="PiedePagina">
         <ul id="abajo">
-            <div class="as">CREADO POR BEIRON's COMPANY. TODOS LOS DERECHOS RESERVADOS©</div>  
+            <div class="as">SUPERMERCADO LA ALIANZA. TODOS LOS DERECHOS RESERVADOS©</div>  
             
             <section>
             <nav id=menu_aba>    

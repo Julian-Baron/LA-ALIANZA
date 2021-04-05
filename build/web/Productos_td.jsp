@@ -73,7 +73,7 @@
                             <li class="nav-item">
                                 <a class="nav-link " href="Carrito.jsp"><img class="bi bi-cart" src="img/cart.svg"></i>Ver carrito</a>
                             </li>
-                            <% 
+                        <% 
                                if(ua==null){%>
                                 <li class="nav-item">
                                     <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
