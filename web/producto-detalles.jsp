@@ -12,6 +12,12 @@
         String id=request.getParameter("id");
         Con_productos producto=new ControladorProducto().getproducto(id);        
         %>
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
     
-        <!--ICONO-->
+    <!--ICONO-->
     <link rel="icon" href="img/alianza_1.png">
     
     <title>Productos</title>

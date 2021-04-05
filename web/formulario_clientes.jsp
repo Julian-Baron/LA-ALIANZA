@@ -3,6 +3,12 @@
     Created on : 20/02/2021, 11:08:09 AM
     Author     : Personal
 --%>
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page import="Constructor.Con_clientes"%>
 <%@page import="Modelos.Mod_Clientes"%>
 <%@page import="java.util.ArrayList"%>

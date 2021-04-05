@@ -3,7 +3,12 @@
     Created on : 16/02/2021, 10:38:53 PM
     Author     : Trabajos
 --%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page import="Modelos.Mod_Domicilios"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Constructor.Con_Domicilios"%>
@@ -97,19 +102,47 @@
     -->                              
                                   
                               </a>
-                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                                <li><a class="dropdown-item nav-link" href="index.jsp">Acción no disponible, inicie sesion para habilitar sus respectivos formularios</a></li>
-
-                              </ul>
+                              
                             </li>                                               
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
-             
-                            <li class="nav-item">
-                              <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
-                            </li>
+                            <%
+                                if(ua==null){%>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.jsp">Iniciar Sesion</a>
+                                </li>
+                            <%}
+                            else
+                            {%>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Bienvenido <%=ua%>
+                                      </a>
+                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Actualizar datos</a></li>
+                                        <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Ver compras generadas</a></li>
+                                        <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Cerrar sesion</a></li>
+                                      </ul>
+                                    </li>                                               
+                                    <li class="nav-item">
+                                      <a class="nav-link active" aria-current="page" href="Formulario_Comprador.jsp"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
+                                    </li>
+
+                                  </ul>
+                                </div>
+                            <%}
+                            %>
+
+                            
                             
                           </ul>
                         </div>

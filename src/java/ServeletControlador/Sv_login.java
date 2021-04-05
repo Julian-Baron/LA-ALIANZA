@@ -81,12 +81,12 @@ public class Sv_login extends HttpServlet {
                         
                        if(rol.equalsIgnoreCase("cliente")){
                             JOptionPane.showMessageDialog(null, "Bienvenido");
-                            response.sendRedirect("Comprador.jsp");
+                            response.sendRedirect("index.jsp");
                              }
                         
                         if (rol.equalsIgnoreCase("administrador")){
                           JOptionPane.showMessageDialog(null, "Bienvenido");
-                            response.sendRedirect("Rol.jsp");
+                            response.sendRedirect(".jsp");
                          }
                        
                      }

@@ -3,7 +3,12 @@
     Created on : 16/02/2021, 07:11:30 PM
     Author     : Trabajos
 --%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page import="javax.swing.JOptionPane"%>
 <%@page import="Modelos.Modelo_Productos"%>
 <%@page import="java.util.ArrayList"%>

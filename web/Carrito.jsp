@@ -9,7 +9,12 @@
 <%@page import="Constructor.Articulo"%>
 <%@page import="Constructor.Con_carrito"%>
 <%@page import="java.util.ArrayList"%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>            
 <%
     HttpSession sesion=request.getSession(true);
     ArrayList<Articulo> articulos = sesion.getAttribute("carrito") == null ? null : (ArrayList)sesion.getAttribute("carrito");
@@ -78,11 +83,7 @@
                                 <a class="nav-link " href="Carrito.jsp">Ver carrito</a>
                             </li>                          
                                 
-                                <li class="nav-item">
-
-                                    <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
-
-                                </li>
+                                
                             
                           </ul>
                         </div>
@@ -145,7 +146,7 @@
                             </tbody>
                         </table>
 
-                            <% if(articulos == null){%
+                            <%if(articulos == null){%>
                             <span style="color: black" >No hay articulos en el carro</span>
                             <%}%>
 

@@ -8,6 +8,12 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Constructor.Con_Compras"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <!DOCTYPE html>
 <html>
 <head>

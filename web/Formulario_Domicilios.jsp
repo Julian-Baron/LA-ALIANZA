@@ -3,7 +3,12 @@
     Created on : 16/02/2021, 10:38:53 PM
     Author     : Trabajos
 --%>
-
+<%
+    HttpSession obj=request.getSession();
+    String ua=(String) obj.getAttribute("usuario");
+    String ced=(String) obj.getAttribute("cedula");
+    String nom_cli=(String) obj.getAttribute("nombre_cli");
+%>
 <%@page import="Constructor.Con_Compras"%>
 <%@page import="Modelos.Mod_Compras"%>
 <%@page import="Modelos.Mod_Domicilios"%>
