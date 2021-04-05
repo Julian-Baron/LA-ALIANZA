@@ -50,6 +50,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     String ua=(String) obj.getAttribute("usuario");
     String ced=(String) obj.getAttribute("cedula");
     String nom_cli=(String) obj.getAttribute("nombre_cli");
+    String rol=(String) obj.getAttribute("rol");
 
       out.write("\n");
       out.write("\n");
@@ -87,7 +88,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
       out.write("    \n");
       out.write("    \n");
-      out.write("    <title>Ya no Soy admin :'v</title>\n");
+      out.write("    <title>Inicio</title>\n");
       out.write("  </head>\n");
       out.write("  <body>\n");
       out.write("      \n");
@@ -117,8 +118,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             <!--</div>-->\n");
       out.write("                <nav class=\"navbar navbar-expand-lg fixed-top navbar-light bg\" style=\"background: #DEB916\" >\n");
       out.write("                    <div class=\"logo\">Supermercado la Alianza                       \n");
-      out.write("                            <img src=\"img/shopping-cart-2020929_640.png \" class=\"\" >\n");
-      out.write("                            </div>\n");
+      out.write("                        <img src=\"img/shopping-cart-2020929_640.png \" class=\"\" >\n");
+      out.write("                        </div>\n");
       out.write("                    <div class=\"container-fluid\"> \n");
       out.write("                            \n");
       out.write("                        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n");
@@ -127,55 +128,69 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n");
       out.write("                          <ul class=\"navbar-nav\">\n");
       out.write("                              <li class=\"nav-item\">\n");
-      out.write("                              <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Inicio</a>\n");
+      out.write("                              <a class=\"nav-link active\" aria-current=\"page\" href=\"index.jsp\">Inicio</a>\n");
       out.write("                            </li>\n");
       out.write("                            <li class=\"nav-item\">\n");
       out.write("                              <a class=\"nav-link active\" aria-current=\"page\" href=\"Productos_td.jsp\">Productos</a>\n");
       out.write("                            </li>\n");
-      out.write("                              <li class=\"nav-item dropdown\">\n");
-      out.write("                              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n");
-      out.write("                                  Formularios\n");
-      out.write("                                  \n");
-      out.write("<!--                       <button type=\"button\" class=\"btn btn-lg btn-primary\" disabled>Formulario Activo</button>\n");
-      out.write("<button type=\"button\" class=\"btn btn-secondary btn-lg\" disabled>Formulario Inactivo</button>\n");
-      out.write("\n");
-      out.write("<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"button\" autocomplete=\"off\">Toggle button</button>\n");
-      out.write("<button type=\"button\" class=\"btn btn-primary active\" data-bs-toggle=\"button\" autocomplete=\"off\" aria-pressed=\"true\">Active toggle button</button>\n");
-      out.write("<button type=\"button\" class=\"btn btn-primary\" disabled data-bs-toggle=\"button\" autocomplete=\"off\">Disabled toggle button</button>\n");
-      out.write("    -->                              \n");
-      out.write("                                  \n");
-      out.write("                              </a>\n");
-      out.write("                              \n");
-      out.write("                            </li>                                               \n");
-      out.write("                            <li class=\"nav-item\">\n");
-      out.write("                              <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Inicio</a>\n");
-      out.write("                            </li>\n");
-      out.write("                            ");
-
-                                if(ua==null){
+      out.write("                       ");
+ 
+                               if(ua==null){
       out.write("\n");
       out.write("                                <li class=\"nav-item\">\n");
       out.write("                                    <a class=\"nav-link\" href=\"login.jsp\">Iniciar Sesion</a>\n");
       out.write("                                </li>\n");
       out.write("                            ");
 }
-                            else
+                            if(rol!=null&&rol.equalsIgnoreCase("empleado")){
+      out.write("\n");
+      out.write("                                <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n");
+      out.write("                                    <ul class=\"navbar-nav\">\n");
+      out.write("                                      <li class=\"nav-item dropdown\">\n");
+      out.write("                                      <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n");
+      out.write("                                         <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-file-earmark-medical\" viewBox=\"0 0 16 16\">\n");
+      out.write("                                            <path d=\"M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z\"/>\n");
+      out.write("                                            <path d=\"M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z\"/>\n");
+      out.write("                                        </svg>Formularios\n");
+      out.write("                                      </a>\n");
+      out.write("                                      <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n");
+      out.write("                                        <li><a class=\"dropdown-item nav-link\" href=\"Formularios de gestion.jsp\">Formularios de Gestion</a></li>\n");
+      out.write("                                      </ul>\n");
+      out.write("                                    </li>                                               \n");
+      out.write("                                    <li class=\"nav-item\">\n");
+      out.write("                                      <a class=\"nav-link active\" aria-current=\"page\" href=\"Formulario_Comprador.jsp\"></a>\n");
+      out.write("                                    </li>\n");
+      out.write("                                    \n");
+      out.write("                                  </ul>\n");
+      out.write("                                </div>\n");
+      out.write("                            ");
+}
+                            if(ua!=null)
                             {
       out.write("\n");
-      out.write("                                <li class=\"nav-item\">\n");
-      out.write("                                    <a class=\"nav-link\" href=\"index.jsp\">cerrar Sesion</a>\n");
-      out.write("                                </li>\n");
-      out.write("                                <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">aaasdasdasd\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link \" href=\"formulario_clientes.jsp\">Bienvenido");
-      out.print(nom_cli);
-      out.write("</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link\" href=\"formulario_Productos.jsp\">Formularios Productos</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link active\" href=\"Formulario_Domicilios.jsp\">Formularios Domicilios</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link\" href=\"Formulario_usuarios.jsp\">Formularios Usuarios</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link\" href=\"Formulario_FActuras.jsp\">Formularios Facturas</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link\" href=\"Formulario_Comprador.jsp\">Formularios Compras</a></li>\n");
-      out.write("                                    <li><a class=\"dropdown-item nav-link\" href=\"Carrito.jsp\">Carrito de Compras</a></li>\n");
-      out.write("                                </ul>\n");
+      out.write("                                <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">\n");
+      out.write("                                    <ul class=\"navbar-nav\">\n");
+      out.write("                                      <li class=\"nav-item dropdown\">\n");
+      out.write("                                      <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n");
+      out.write("                                          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-person-square m-2\" viewBox=\"0 0 16 16\">\n");
+      out.write("                                              <path d=\"M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z\"/>\n");
+      out.write("                                              <path d=\"M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z\"/>\n");
+      out.write("                                          </svg>Bienvenido ");
+      out.print(ua);
+      out.write("\n");
+      out.write("                                      </a>\n");
+      out.write("                                      <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n");
+      out.write("                                        <li><a class=\"dropdown-item nav-link\" href=\"Formulario_usuarios.jsp\">Actualizar datos</a></li>\n");
+      out.write("                                        <li><a class=\"dropdown-item nav-link\" href=\"Formulario_FActuras.jsp\">Ver compras generadas</a></li>\n");
+      out.write("                                        <li><form action='cerrar_sesion' method=\"post\"><button name=\"terminar\"><a class=\"dropdown-item nav-link\" href=\"\">Cerrar sesion</a></button></form></li>\n");
+      out.write("                                      </ul>\n");
+      out.write("                                    </li>                                               \n");
+      out.write("                                    <li class=\"nav-item\">\n");
+      out.write("                                      <a class=\"nav-link active\" aria-current=\"page\" href=\"Formulario_Comprador.jsp\"></a>\n");
+      out.write("                                    </li>\n");
+      out.write("                                    \n");
+      out.write("                                  </ul>\n");
+      out.write("                                </div>\n");
       out.write("                            ");
 }
                             

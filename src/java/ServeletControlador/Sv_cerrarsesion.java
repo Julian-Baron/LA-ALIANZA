@@ -1,28 +1,27 @@
-                /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package ServeletControlador;
 
-import Constructor.Articulo;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Personal
  */
-@WebServlet(name = "AddCart", urlPatterns = {"/agregarproducto"})
-public class AddCart extends HttpServlet {
-    //agregarproducto
+@WebServlet(name = "cerrar_sesion", urlPatterns = {"/cerrar_sesion"})
+public class Sv_cerrarsesion extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,34 +33,11 @@ public class AddCart extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        int contador=0;
-        int cantidad =Integer.parseInt(request.getParameter("cantidad"));
-        String idproducto= request.getParameter("id");
-        
-                
-        HttpSession sesion=request.getSession(true);
-        ArrayList<Articulo> articulos = sesion.getAttribute("carrito")== null ? new ArrayList<>(): (ArrayList)sesion.getAttribute("carrito");
-        
-        boolean flag = false;
-        
-        if(articulos.size()>0){
-            for(Articulo a: articulos){
-                if(idproducto.equalsIgnoreCase(a.getIdProducto())){
-                    a.setCantidad(a.getCantidad()+cantidad);
-                    flag = true;
-                    break;
-                }
-                contador++;
-            }
-        }
-        if(!flag){
-            articulos.add(new Articulo(idproducto, cantidad));
-        }
-        
-        sesion.setAttribute("carrito", articulos);
-        sesion.setAttribute("contador", contador);
-        response.sendRedirect("Carrito.jsp");
+         
+        HttpSession obj=request.getSession();
+         
+         obj.invalidate();
+         response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

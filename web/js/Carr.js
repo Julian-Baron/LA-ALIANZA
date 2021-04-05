@@ -21,9 +21,7 @@ $(function(){
        })
    });
    
-   var elementostabla = $('#shop-table tr');
-    alert(elementostabla);
-   
+   var elementostabla = $('#shop-table tr');   
 });
    
   

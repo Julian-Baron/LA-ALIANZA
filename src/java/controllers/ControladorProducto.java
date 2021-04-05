@@ -21,7 +21,11 @@ public class ControladorProducto {
         String  htmlcode ="";
         
         for(Con_productos con: mp.consultarusuarios()){
-            htmlcode  +="<div class=\"card\" style=\"\">\n" +
+            htmlcode  +="<div class=\"container-xl\" id=\"container-first\" style=\"color: black\">\n" +
+"                <div class=\"row\">\n" +
+"                   \n" +
+"                       <div class=\"col-sm-4\">"
+                    + "<div class=\"card\" style=\"\">\n" +
 
 "                                <img src=\""+con.getImg()+"\" class=\"card-img-top\" alt=\"...\">\n" +
 "                                <h1 class=\"card-header\">"+con.getNombre_pro()+"</h1>\n" +
@@ -33,7 +37,11 @@ public class ControladorProducto {
 
 "                                      </div>\n" +
 "                                      \n" +
-"                         </div>\n";                                                          
+"                         </div>\n"
+                    + "</div>\n" +
+"                    \n" +
+"                </div>"
+             + "</div>";                                                          
         }
         
         return htmlcode;
