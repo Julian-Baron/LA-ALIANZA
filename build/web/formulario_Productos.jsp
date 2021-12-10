@@ -187,7 +187,7 @@
             
             <div id="section-tabla">
                 
-                <table class="table table-success table-striped">
+                <table class="table table-success table-striped table-light">
 
                    <thead>
                      <tr>
@@ -208,7 +208,7 @@
                         Modelos.Modelo_Productos mu=new Modelo_Productos();
                         datosu=mu.consultarusuarios();
                         Con_productos  u=new Con_productos();
-                        JOptionPane.showMessageDialog(null, "Nombre ");
+                        
                         for(int i=0; i<datosu.size(); i++){
 
                         u=datosu.get(i);

@@ -1,5 +1,14 @@
 *{box-sizing:border-box;}
 
+@font-face {
+  font-family: 'Noto Sans', sans-serif;  
+  src: url("../Fonts/Noto_Sans/NotoSans-Bold.ttf");
+}   
+body{
+      font-family: 'Noto Sans', sans-serif;  
+
+}
+
 form{
 	width:350px;
 	padding:16px;

@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de domicilios 
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
 import Constructor.Con_Domicilios;
-import Constructor.Con_productos;
+/*import Constructor.Con_productos;*/
 import Modelos.Mod_Domicilios;
-import Modelos.Modelo_Productos;
+/*import Modelos.Modelo_Productos;*/
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -18,10 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Trabajos
- */
 @WebServlet(name = "Sv_domicilios", urlPatterns = {"/Sv_domicilios"})
 public class Sv_domicilios extends HttpServlet {
 
@@ -38,7 +35,18 @@ public class Sv_domicilios extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-            /* TODO output your page here. You may use following sample code. */
+            /**
+             * @param a guarda el codigo del domicilio a ingresar, modificar o eliminar del domicilio
+             
+             * @param c guarda el id de la compra a ingresar, modificar o eliminar del domicilio
+             
+             * @param e guara la fecha del domicilio a ingresar, modificar o eliminar del domicilio
+             * @param f guarda la cedula del empleado para realizar el domicilio a ingresar, modificar o eliminar del cliente del domicilio
+             * @param con llama al constructor para enviar los datos obtenidos.
+             * @param md llama el modelo Mod_cliente para generar la CRUD 
+             * 
+             * Los JOptionPane.showMessageDialog mostraran mensajes en el aplicativo en caso de que la verificacion haya sido correcto o no lo haya sido
+             */
             if (request.getParameter("enviar")!=null) {
                 String a,c,e,f;
                 boolean in;
@@ -118,7 +126,7 @@ public class Sv_domicilios extends HttpServlet {
                      
                 
             }
-            response.sendRedirect("Formulario_Domicilios.jsp");     
+            response.sendRedirect("Formulario_Domicilios.jsp");// Renvia a la pagina jsp
 
         
     }

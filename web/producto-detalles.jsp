@@ -11,7 +11,7 @@
 <%
         String id=request.getParameter("id");
         Con_productos producto=new ControladorProducto().getproducto(id);        
-        %>
+%>
 <%
     HttpSession obj=request.getSession();
     String ua=(String) obj.getAttribute("usuario");
@@ -46,7 +46,7 @@
         
         <header>
 		<!-- cabecera de la pagina-->
-                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #DEB916">
+                <nav class="navbar navbar-expand-lg fixed-top navbar-light bg" style="background: #ffff00">
                     <div class="logo">Supermercado la Alianza                       
                             <img src="img/shopping-cart-2020929_640.png " class="" >
                             </div>

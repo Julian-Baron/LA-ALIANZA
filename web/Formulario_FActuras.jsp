@@ -52,6 +52,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
        <!-- inicio de la cabecera-->
+       <!-- inicio de la cabecera-->
        <header id="container-first">        
 		<!--<div class="wrapper">-->
 			
@@ -80,39 +81,51 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                              <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Formularios
-                              </a>
-                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item nav-link" href="Formulario_usuarios.jsp">Formularios Usuarios</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_FActuras.jsp">Formularios Facturas</a></li>
-                                <li><a class="dropdown-item nav-link" href="Formulario_Comprador.jsp">Formularios Compras</a></li>
-                              </ul>
-                            </li>                                               
+                                                                           
                             <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="Formulario_Comprador.jsp"></a>
                             </li>
+                            
+                            
                             <li class="nav-item">
                                 <a class="nav-link " href="Formularios de gestion.jsp">Volver</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.jsp">Cerrar Sesion</a>
-                            </li>
-                            
+                                                       
                           </ul>
                         </div>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        <ul class="navbar-nav">
+                                          <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-square m-2" viewBox="0 0 16 16">
+                                                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                                              </svg>Bienvenido <%=ua%>
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                            <li><form action="cerrar_sesion" method="post"><button name="terminar" class="btn btn-primary">Cerrar sesion</button></form></li>
+                                          </ul>
+                                        </li>                                               
+                                        <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="Formulario_Comprador.jsp"></a>
+                                        </li>
+
+                                      </ul>
+                                    </div>   
+                              </ul>
+                            </div>
         
             </nav>
        
 	</header>
        
     <!-- Contenedor formulario-->
-    <div class="container " id="container-first">
+    <div class="container  mt-0" id="container-first"style="color: #333333">
             <h1>Formulario para la Gestion de facturas</h1>
             <div class="row">
-                <div id="section">
-                    <form action="Sv_facturas" method="Post" name="formDatosPersonales">
+                <div id="section" >
+                    <form action="Formulario_FActuras.jsp" method="Post" name="formDatosPersonales">
 
                         <div class="mb-4">
                             <label  class="form-label">Consultar Factura por numero de factura</label>
@@ -120,7 +133,6 @@
                             <div  class="form-text"></div>
                             <input type="submit" name="FacturaEn" class="btn btn-primary" value="Ingresar">
                         </div>
-                        
                         
 
                         <div class="mb-4">
@@ -134,7 +146,7 @@
 
                         <div class="mb-4">
                             <label  class="form-label">Consultar Factura  por fecha de accion</label>
-                            <input type="number" name="Cantidad re" class="form-control"  aria-describedby="emailHelp">
+                            <input type="date" name="Cantidad re" class="form-control"  aria-describedby="emailHelp">
                             <div  class="form-text"></div>
                             <input type="submit" name="PorFecha" class="btn btn-primary" value="Ingresar">
                         </div>
@@ -175,14 +187,15 @@
                     
                     
                     <div id="section-tabla">
-                        <table class="table table-success table-striped">
+                        <table class="table table-success table-striped table-light">
                            <thead>
                              <tr>
                                  <th>Id_factura</th>
                                  <th>Fecha_fac</th>
                                  <th>Cedula</th>
                                  <th>Id_compra</th>
-                                 <th>Cod_domicilio</th>
+                                 <th>status</th>
+                                 <th>tpken</th>
                                  
                              </tr>     
                          </thead>
@@ -205,10 +218,12 @@
                                         <tr>
                                             <td><%=u.getId_factura()%></td>
                                             <td><%=u.getFecha_fac()%></td>
+                                            <td><%=u.getStatus()%></td>
+                                            <td><%=u.getTotal()%></td>
                                             <td><%=u.getCedula()%></td>
-                                            <td><%=u.getId_compra()%></td>
-                                            <td><%=u.getCod_domicilio()%></td>
+                                            <td><input name="token" value="<%=u.getToken()%>" hidden=""></td>
                                             <td><input type="submit" name="btnpdf" class="btn btn-primary" value="Generar Factura"></td>
+                                            <td><input type="submit" name="eliminar" class="btn btn-warning" value="Eliminar Factura"></td>
                                         </tr>
                             </form>
                                      </tbody>
@@ -225,15 +240,16 @@
             <br>
             <br>
             <br>
-            <h1 class="">Tabla Generada por consultas</h1>
+            <h1 class="" style="color: #333333">Tabla Generada por consultas</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>id_factura</th>
                     <th>Fecha_Fac</th>
+                    <th>status</th>
+                    <th>token</th>
+                    <th>total</th>
                     <th>Cedula</th>
-                    <th>Id_compra</th>
-                    <th>Codigo_Domicilio</th>
                 </tr>
             </thead>
                             
@@ -245,7 +261,7 @@
                 String b=null,c=null;
                 
                 
-                Con_Facturas con=new Con_Facturas(c, b, a);
+                Con_Facturas con=new Con_Facturas("", a);
                 Modelos.Mod_Facturas md=new Mod_Facturas();
                 Con_Facturas cu=new Con_Facturas();
                 
@@ -263,14 +279,16 @@
                         <tr>
                             <td><%=cu.getId_factura()%></td>
                             <td><%=cu.getFecha_fac()%></td>
+                            <td><%=cu.getStatus()%></td>
+                            <td><%=cu.getToken()%></td>
+                            <td><%=cu.getTotal()%></td>
                             <td><%=cu.getCedula()%></td>
-                            <td><%=cu.getId_compra()%></td>
-                            <td><%=cu.getCod_domicilio()%></td>
                         </tr>
                     </tbody>
                     <%
                         
                     }
+                    response.sendRedirect("Formulario_FActuras.jsp");
                 }
                     
                     
@@ -282,7 +300,7 @@
                 String b=null;
                 
                 
-                Con_Facturas con=new Con_Facturas(c, b, a);
+                Con_Facturas con=new Con_Facturas(0, "", c);
                 Modelos.Mod_Facturas md=new Mod_Facturas();
                 Con_Facturas cu=new Con_Facturas();
                 
@@ -299,9 +317,10 @@
                         <tr>
                             <td><%=cu.getId_factura()%></td>
                             <td><%=cu.getFecha_fac()%></td>
+                            <td><%=cu.getStatus()%></td>
+                            <td><%=cu.getToken()%></td>
+                            <td><%=cu.getTotal()%></td>
                             <td><%=cu.getCedula()%></td>
-                            <td><%=cu.getId_compra()%></td>
-                            <td><%=cu.getCod_domicilio()%></td>
                         </tr>
                     </tbody>
                     <%
@@ -315,7 +334,7 @@
                 String c=null;
                 
                 
-                Con_Facturas con=new Con_Facturas(c, b, a);
+                Con_Facturas con=new Con_Facturas(0, b,"");
                 Modelos.Mod_Facturas md=new Mod_Facturas();
                 Con_Facturas cu=new Con_Facturas();
                 
@@ -332,9 +351,10 @@
                         <tr>
                             <td><%=cu.getId_factura()%></td>
                             <td><%=cu.getFecha_fac()%></td>
+                            <td><%=cu.getStatus()%></td>
+                            <td><%=cu.getToken()%></td>
+                            <td><%=cu.getTotal()%></td>
                             <td><%=cu.getCedula()%></td>
-                            <td><%=cu.getId_compra()%></td>
-                            <td><%=cu.getCod_domicilio()%></td>
                         </tr>
                     </tbody>
                     <%

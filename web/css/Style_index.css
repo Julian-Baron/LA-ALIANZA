@@ -1,12 +1,13 @@
 
 
-/*imagen principal que se presentara al inicio de pantalla*/
+/**imagen principal que se presentara al inicio de pantalla**/
 
 .img-principal{
-   
     border-bottom: 35px solid transparent;
 }
 
+
+/**Posicion de imagen de el index**/
 .contenedor{
     position:relative;
     display:inline-block;

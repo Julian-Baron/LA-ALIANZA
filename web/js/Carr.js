@@ -12,19 +12,22 @@ $(function(){
        $.ajax({
            url: 'borraritem',
            type: 'post',
-           data:{
-               idproducto:idproducto
-           },
+           data:{idproducto:idproducto},
+           
            success: function(r){
                elemento.parent().parent().remove();
+               var elementostabla = $('#shop-table tr');
+               if(elementostabla.length <= 1){
+                   $('#cart-container').append("<span>No hay articulos en el carro</span>");
+               }
+               $('#txt-subtotal').text(r);
+               $('#txt-total').text(r);
            }
        })
    });
    
-   var elementostabla = $('#shop-table tr');   
-});
    
-  
-
+   
+});
 
 

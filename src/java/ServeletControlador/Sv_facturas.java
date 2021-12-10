@@ -1,22 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de facturas 
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
+
+/*
 
 import Constructor.Con_Facturas;
 import Modelos.Mod_Domicilios;
 import Modelos.Mod_Facturas;
+
+*/
 import java.io.IOException;
 import java.io.PrintWriter;
+/*
+
 import java.util.ArrayList;
+
+*/
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+/*
+
 import javax.swing.JOptionPane;
+
+*/
 
 
 @WebServlet(name = "Sv_facturas", urlPatterns = {"/Sv_facturas"})
@@ -27,7 +40,7 @@ public class Sv_facturas extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            // Se elimina el codigo por modificacion
            /* if (request.getParameter("enviar")!=null) {
                 /*String a,c,e,f;
                 boolean in;

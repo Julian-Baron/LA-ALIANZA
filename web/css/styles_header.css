@@ -1,9 +1,14 @@
 *{
     margin:0;padding: 0;
 }
+@font-face {
+  font-family: 'Noto Sans', sans-serif;  
+  src: url("../Fonts/Noto_Sans/NotoSans-Bold.ttf");
+}   
 
 body{
     background: #F2F2D7;
+    font-family: 'Noto Sans', sans-serif;  
 }
 
 header {
@@ -11,7 +16,7 @@ header {
 	overflow:hidden; /* Eliminamos errores de float */
         background: #ffffff;
 	margin-bottom:20px;
-        
+        font-family: 'Noto Sans', sans-serif;  
 }
 
 .wrapper {
@@ -21,7 +26,7 @@ header {
 header .logo {
 	color:#ffffff;
 	font-size:50px;
-        background: #dae54d;
+        background: #999900;
         padding-left: 20px;
         padding-right: 0px;
 }

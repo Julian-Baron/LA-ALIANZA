@@ -1,8 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para mostrar la imagen en el carrito de compras
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
+//importaciones
 package ServeletControlador;
 
 import java.io.IOException;
@@ -33,11 +35,11 @@ public class Sv_carritoImg extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            //Codigo que generara la imagen del articulo en el carro de compras
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Sv_carritoImg</title>");            
+            out.println("<title>Servlet Sv_carritoImg</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Sv_carritoImg at " + request.getContextPath() + "</h1>");
@@ -59,9 +61,9 @@ public class Sv_carritoImg extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        String id=request.getParameter("id");
-          
+
+        String id = request.getParameter("id");
+
     }
 
     /**

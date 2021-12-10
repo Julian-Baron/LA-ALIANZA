@@ -1,19 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para cerrar sesion del usuario
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+/*import java.io.PrintWriter;*/
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
+/*import javax.swing.JOptionPane;*/
 
 /**
  *
@@ -21,7 +22,7 @@ import javax.swing.JOptionPane;
  */
 @WebServlet(name = "cerrar_sesion", urlPatterns = {"/cerrar_sesion"})
 public class Sv_cerrarsesion extends HttpServlet {
-
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,11 +34,13 @@ public class Sv_cerrarsesion extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         
+        /**
+         * Invalida la sesion a ala hora de cerrar la cuenta de usuario eliminando asi todos los articulos de carro de compras
+         */
         HttpSession obj=request.getSession();
          
          obj.invalidate();
-         response.sendRedirect("index.jsp");
+         response.sendRedirect("index.jsp");//Redirecciona la pagina al index
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -1,23 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de compras carrito
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
+
+/*
 
 import Constructor.Con_carrito;
 import Constructor.Con_productos;
 import Modelos.Modelo_Productos;
+*/
+
 import java.io.IOException;
 import java.io.PrintWriter;
+/*
 import java.util.ArrayList;
 import java.util.List;
+*/
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+/*
 import javax.swing.JOptionPane;
+*/
 
 /**
  *
@@ -25,7 +34,7 @@ import javax.swing.JOptionPane;
  */
 @WebServlet(name = "Sv_comprasCarrito", urlPatterns = {"/Sv_comprasCarrito"})
 public class Sv_comprasCarrito extends HttpServlet {
-
+  
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,6 +44,8 @@ public class Sv_comprasCarrito extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    // Eliminacion del codigo que no se da uso
     
     /*
     Con_productos conp=new Con_productos();

@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de actualizacion de datos
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
@@ -36,23 +37,41 @@ public class actualizar_datos extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-            if(request.getParameter("aceptar")!=null){
+        
+        /**
+         * REGISTRO DE DATOS DE USUARIOS 
+         * @param nom nombre de usuario
+         * @param apellido apellido de usuario
+         * @param correo correo de usuario
+         * @param direccion direccion del usuario
+         * @param nombreusu nombre de usuario  
+         * @param password contraseña del usario
+         * @param sexo sexo de usuario
+         * @param telefono de usuario
+         * @param mod realiza la instancia con el modelo Mod_login
+         * El parametro password realiza la codificacion de la contraseña con encriptacion MD5
+         * @param con realiza la instancia del constructor Con_actualizarDatos
+         * @param in realiza la sentencua de insertar en  tabla cliente
+         */
+        
+             if(request.getParameter("aceptar")!=null){
                 String nom,apellido,correo,direccion,nombreusu,password,sexo;
-                int telefono,cedula;
+                int cedula;
                 boolean in;
                 nom=request.getParameter("nombre");
                 apellido=request.getParameter("apellidos");
                 correo=request.getParameter("correo");
                 direccion=request.getParameter("direccion");
-                telefono=Integer.parseInt(request.getParameter("telefono"));
+                String telefono=request.getParameter("telefono");
                 nombreusu=request.getParameter("nombre_usu");
                 password=request.getParameter("contrasena");
                 sexo=request.getParameter("sexo");
                 cedula=Integer.parseInt(request.getParameter("cedula"));
 
-
-                Con_actualizarDatos con=new Con_actualizarDatos(nom, apellido, correo, direccion, telefono, nombreusu, password, sexo, cedula);
                 Mod_actualizarDatos mod=new Mod_actualizarDatos();
+                password=mod.getMD5(password);
+                Con_actualizarDatos con=new Con_actualizarDatos(nom, apellido, correo, direccion, telefono, nombreusu, password, sexo, cedula);
+                
                 in=mod.insertar_datos(con);
 
                 if(in){
@@ -65,6 +84,9 @@ public class actualizar_datos extends HttpServlet {
                 response.sendRedirect("datos_actualizar.jsp");
                 
             }
+             else{
+                 response.sendRedirect("index.jsp"); //redirecciona
+             }
             
     }
 

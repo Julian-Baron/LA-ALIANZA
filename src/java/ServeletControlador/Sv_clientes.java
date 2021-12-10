@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de clientes 
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
 import Constructor.Con_clientes;
-import Constructor.Con_productos;
+/*import Constructor.Con_productos;*/
 import Modelos.Mod_Clientes;
-import Modelos.Modelo_Productos;
+/*import Modelos.Modelo_Productos;*/
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -38,6 +39,19 @@ public class Sv_clientes extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
+            /**
+             * @param a guarda la cedula a ingresar, modificar o eliminar del cliente
+             * @param b guarda el nombre a ingresar, modificar o eliminar del cliente
+             * @param c guarda el apellido a ingresar, modificar o eliminar del cliente
+             * @param d guarda del correo a ingresar, modificar o eliminar del cliente
+             * @param e guara la direccion a ingresar, modificar o eliminar del cliente
+             * @param f guarda el telefono a ingresar, modificar o eliminar del cliente del cliente
+             * @param con llama al constructor para enviar los datos obtenidos.
+             * @param md llama el modelo Mod_cliente para generar la CRUD 
+             * 
+             * Los JOptionPane.showMessageDialog mostraran mensajes en el aplicativo en caso de que la verificacion haya sido correcto o no lo haya sido
+             */
             
             if (request.getParameter("enviar")!=null) {
                 String a,b,c,e,f;
@@ -80,9 +94,8 @@ public class Sv_clientes extends HttpServlet {
                 Con_clientes con=new Con_clientes(a, b, c, d, e, f);
                 Modelos.Mod_Clientes md=new Mod_Clientes();
                 
-                /*Esto esta asi porque copie el modelo de producto paracambiarlo al de 
-                    clientes
-                */
+                //Esto esta asi porque copie el modelo de producto para cambiarlo al de clientes
+                
                 in=md.modificar_producto(con);
            
                 if(in){
