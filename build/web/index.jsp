@@ -335,7 +335,7 @@
     <footer class="footer">
 
         <h3>Supermercado La Alianza Copyright &copy;</h3>
-        
+        <h3>SI DESEA MAS AYUDA PUEDE LLAMAR AL Nº 3212929415  y pedir asesoria</h3>
         
 
     </footer>

@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de usuarios
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
@@ -36,7 +37,20 @@ public class Sv_usuarios extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-                
+            
+            /**
+             * @param a guarda la cedula a ingresar, modificar o eliminar del usuario
+             * @param b guarda el nombre a ingresar, modificar o eliminar del usuario
+           
+             * @param d guarda el rol  a ingresar, modificar o eliminar del usuario
+             * @param ef guara la contraseña a ingresar, modificar o eliminar del usuario
+             * @param e guarda el sexo a ingresar, modificar o eliminar del usuario
+             * @param con llama al constructor para enviar los datos obtenidos.
+             * @param mu llama el modelo Mod_usuarios para generar la CRUD 
+             * @param an realiza el resultado de la sentencia de insertar usuarios, modificar y eliminar usuarios
+             * Los JOptionPane.showMessageDialog mostraran mensajes en el aplicativo en caso de que la verificacion haya sido correcto o no lo haya sido
+             */
+            
             if (request.getParameter("enviar")!=null) {
                 String a,b,ef,d,e;
                 boolean an=false;

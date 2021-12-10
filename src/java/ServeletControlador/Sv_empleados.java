@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Controlador para el control de empleados 
+ * Contiene uso de constructores  y modelos para realizar la conexion con la base de datos
+ *
+ * @author JULIAN BARON
  */
 package ServeletControlador;
 
@@ -18,10 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Personal
- */
+
 @WebServlet(name = "Sv_empleados", urlPatterns = {"/Sv_empleados"})
 public class Sv_empleados extends HttpServlet {
 
@@ -39,7 +37,21 @@ public class Sv_empleados extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            /*MODIFICAR PARAMETRO*/
+            /**
+             * MODIFICAR PARAMETRO
+             * 
+             * @param a guarda la cedula a ingresar, modificar o eliminar del empleado
+             * @param b guarda el nombre a ingresar, modificar o eliminar del empleado
+             * @param c guarda el apellido a ingresar, modificar o eliminar del empleado
+             * @param d guarda el telefono a ingresar, modificar o eliminar del empleado
+             * @param e guarda el correo a ingresar, modificar o eliminar del empleado
+             * @param f guarda el codigo a ingresar, modificar o eliminar del cliente del empleado
+             * @param con llama al constructor para enviar los datos obtenidos.
+             * @param md llama el modelo Mod_cliente para generar la CRUD 
+             * 
+             * Los JOptionPane.showMessageDialog mostraran mensajes en el aplicativo en caso de que la verificacion haya sido correcto o no lo haya sido
+             */
+             
             if (request.getParameter("modificar")!=null) {
                 String a,b,c,e,f;
                 boolean in;
@@ -130,7 +142,7 @@ public class Sv_empleados extends HttpServlet {
             }
             
             
-            response.sendRedirect("Formulario_empleados.jsp");
+            response.sendRedirect("Formulario_empleados.jsp"); //reenvia al jsp
 
         }
     }
