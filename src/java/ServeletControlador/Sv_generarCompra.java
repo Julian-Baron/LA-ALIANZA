@@ -18,6 +18,14 @@ import java.io.Console;
 import java.io.PrintWriter;
 
 */
+
+/**
+     * USO DE COMPRAS
+     * @param cllama la conexion
+     * @param cnn conecta la base de datos
+     * @param ps prepara la sententecia a realizar
+     * @param rs obtiene el resultado de la sentencia
+    */
 import java.io.IOException;
 
 import java.sql.Connection;
@@ -36,12 +44,7 @@ import javax.swing.JOptionPane;
 @WebServlet(name = "generar_compra", urlPatterns = {"/generar_compra"}) 
 public class Sv_generarCompra extends HttpServlet {
     
-    /**
-     * @param con llama la conexion
-     * @param cnn conecta la base de datos
-     * @param ps prepara la sententecia a realizar
-     * @param rs obtiene el resultado de la sentencia
-    */
+    
     Conexion con=new Conexion();
     Connection cnn=con.conexionbd();
   
